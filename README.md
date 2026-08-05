@@ -1,21 +1,27 @@
 # Paola | Comunicación Digital
 
 Hola, soy Paola 👋
-Soy comunicadora digital especializada en la creación de contenido para redes sociales, la estrategia de marca y la presencia online.
+Comunicadora social y creadora de contenidos. Transformo ideas en estrategias y contenidos que conectan con las personas, fortalecen marcas y comunican con creatividad y propósito.
 
-## Sobre mí
-Creo contenidos que conectan con la audiencia, fortalecen la identidad de marca y comunican mensajes con claridad, creatividad y propósito.
+## 🛠️ Uso
 
-## Servicios
-- Creación de contenido para redes sociales
-- Estrategia de comunicación digital
-- Diseño de piezas visuales y textos para campañas
-- Gestión de contenido para marcas y perfiles personales
+### PowerShell
 
-## Proyectos
-Este repositorio reúne algunos de mis trabajos, ideas y piezas de comunicación creadas con un enfoque creativo y estratégico.
+```powershell
+cd desktop/portafolio-paola-creacion-contenido
+```
 
-## Contacto
-- Instagram: @tuusuario
-- LinkedIn: tu perfil
-- Email: tuemail@email.com
+```powershell
+git-pull
+```
+
+```powershell
+git-push
+```
+
+## 📌 Reglas del proyecto
+
+- `requirements.md` ← documento maestro del cliente
+- `design.md` ← decisiones de diseño
+- `tasks.md` ← seguimiento del desarrollo
+

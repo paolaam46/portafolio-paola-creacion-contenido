@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "9aeaa1c10c81a8a3",
+    "type": "split",
+    "children": [
+      {
+        "id": "17c18e2e62b09b1e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f954b6e0c7c990d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Actualizacion V2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Actualizacion V2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b7fe6b540e63803e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6615ce5c77f47af9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d06449faeccf4917",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "d6498b1194c5f973",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "332603ea95cde40b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "cb9045b55c72d648",
+    "type": "split",
+    "children": [
+      {
+        "id": "973f8b506da9ca5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a72ffe97c0718a53",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "readme.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de readme"
+            }
+          },
+          {
+            "id": "794ae4557f7b6624",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "readme.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de readme"
+            }
+          },
+          {
+            "id": "a7fa9da27178dd47",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "a3defe1adefa23e2",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "57ac9593db50028c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "readme.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de readme"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "d06449faeccf4917",
+  "lastOpenFiles": [
+    "Actualizacion V2.md",
+    "index.md",
+    "02-que-hago-2026-07-10-1630/sobremi.svg",
+    "01-inicio-2026-07-10-1630/sobremi.svg",
+    "01-inicio-2026-07-10-1630/core.svg",
+    "09-ruta-2027-2026-07-10-1630/1 1.png",
+    "09-ruta-2027-2026-07-10-1630/9 1.png",
+    "12-galeria-2026-07-10-1630/5.png",
+    "12-galeria-2026-07-10-1630/6.png",
+    "12-galeria-2026-07-10-1630/7.png",
+    "12-galeria-2026-07-10-1630/8.png",
+    "12-galeria-2026-07-10-1630/9.png",
+    "plan_estructura.md",
+    "11-editorial-unicauca-2026-07-10-1630/reel el telar.mp4",
+    "11-editorial-unicauca-2026-07-10-1630/atardecernegro.mp4",
+    "11-editorial-unicauca-2026-07-10-1630/Navidad_ tiempo de compartir detalles desde el alma - Editorial Unicauca.mp4",
+    "11-editorial-unicauca-2026-07-10-1630/teaser quintin.mp4",
+    "10-reacreditados-2026-07-10-1630/cumple3.mp4",
+    "10-reacreditados-2026-07-10-1630/FIET 1.mp4",
+    "08-subete-bus-2026-07-10-1630/CAMINO 2.mp4",
+    "06-protagonistas-2026-07-10-1630/PROTA 2.mp4",
+    "04-ods-dato-2026-07-10-1630/ICET 1.mp4",
+    "12-galeria-2026-07-10-1630",
+    "readme.md"
+  ]
+}

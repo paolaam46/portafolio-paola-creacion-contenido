@@ -1,0 +1,48 @@
+/* ================= HERO ================= */
+
+.hero {}
+.hero__container {}
+.hero__content {}
+.hero__title {}
+.hero__subtitle {}
+.hero__description {}
+.hero__actions {}
+.hero__image {}
+
+/* ================= ABOUT ================= */
+
+.about {}
+.about__container {}
+.about__content {}
+.about__title {}
+.about__description {}
+
+/* ================= SERVICES ================= */
+
+.services {}
+.services__container {}
+.services__content {}
+.services__title {}
+.services__list {}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio {}
+.portfolio__container {}
+.portfolio__content {}
+.portfolio__title {}
+.portfolio__list {}
+
+/* ================= CONTACT ================= */
+
+.contact {}
+.contact__container {}
+.contact__content {}
+.contact__title {}
+.contact__actions {}
+
+/* ================= FOOTER ================= */
+
+.footer {}
+.footer__container {}
+.footer__content {}
