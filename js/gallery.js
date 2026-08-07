@@ -38,7 +38,8 @@ function initGallery (_resources) {
    * luego las de la galería principal (9 en adelante).
    */
   const ALL_URLS = [
-    ..._resources.map(d => d.url),
+    ...(_resources[0] && _resources[0].data ? _resources[0].data.map(d => d.url) : []),
+    ..._resources.filter(r => r.type !== "gallery").flatMap(r => r.data ? r.data.map(d => d.url) : [])
   ];
 
   // ─── Estado ───────────────────────────────────────────────────────────────────

@@ -1,67 +1,74 @@
 
 
-const G = '12-galeria-2026-07-10-1630';
+const TEST_IMG_PATH = 'assets/images/img_test';
 
-/** Imágenes de la galería principal */
+/** Imágenes de la galería de prueba */
 const resources = [
   {
     type: "gallery",
     title: "UNICAUCA",
     data: [
-      { url: `${G}/1.png` },
-      { url: `${G}/2.png` },
-      { url: `${G}/3.png` },
-      { url: `${G}/4.png` },
-      { url: `${G}/5.png` },
-      { url: `${G}/6.png` },
-      { url: `${G}/7.png` },
-      { url: `${G}/8.png` },
-      { url: `${G}/9.png` },
+      { url: `${TEST_IMG_PATH}/1.jpg` },
+      { url: `${TEST_IMG_PATH}/2.jpg` },
+      { url: `${TEST_IMG_PATH}/3.jpg` },
+      { url: `${TEST_IMG_PATH}/4.jpg` },
+      { url: `${TEST_IMG_PATH}/5.jpg` },
+      { url: `${TEST_IMG_PATH}/6.jpg` },
     ]
   },
   {
     type: 'image',
     data: [{  
-      url: `${G}/Imagen5.jpg.jpeg`,
+      url: `${TEST_IMG_PATH}/1.jpg`,
       tag: 'Fotoperiodismo',
-      caption: 'Cobertura periodística en tiempo real. Análisis visual de coyunturas políticas y sociales que marcan el rumbo de las comunidades locales.',
+      caption: 'Cobertura periodística en tiempo real. Análisis visual de coyunturas políticas y sociales.',
       footer: 'Prensa'
     }]
   },
   {
     type: 'image',
     data: [{  
-      url: `${G}/_DSC0181.JPG`,
+      url: `${TEST_IMG_PATH}/2.jpg`,
       tag: 'Composición',
-      caption: 'Composición fotográfica con ojo de autor. Exploración de luces, sombras y geometría en espacios cotidianos y arquitectónicos.',
+      caption: 'Composición fotográfica con ojo de autor. Exploración de luces, sombras y geometría.',
       footer: 'Fotografía Artística'
     }]
   },
   {
     type: 'image',
     data: [{  
-      url: `${G}/_DSC0250.JPG`,
+      url: `${TEST_IMG_PATH}/3.jpg`,
       tag: 'Naturaleza & Entorno',
-      caption: 'El paisaje caucano como protagonista. Registro de la riqueza natural y el contraste geográfico de los diferentes municipios.',
+      caption: 'El paisaje caucano como protagonista. Registro de la riqueza natural.',
       footer: 'Paisajismo'
     }]
   },
   {
     type: 'image',
     data: [{  
-      url: `${G}/_DSC0259.JPG`,
+      url: `${TEST_IMG_PATH}/4.jpg`,
       tag: 'Identidad Local',
-      caption: 'Registro de identidad territorial en el Cauca. Una mirada profunda a los oficios tradicionales y el legado cultural.',
+      caption: 'Registro de identidad territorial en el Cauca. Una mirada profunda a los oficios tradicionales.',
       footer: 'Patrimonio Visual'
     }]
   },
   {
     type: 'image',
     data: [{  
-      url: `${G}/_DSC0261.JPG`,
+      url: `${TEST_IMG_PATH}/5.jpg`,
       tag: 'Vida Cotidiana',
-      caption: 'Escenas del día a día en el Cauca. El ritmo de la ciudad y el campo capturados con sensibilidad documental.',
+      caption: 'Escenas del día a día en el Cauca. El ritmo de la ciudad y el campo capturados con sensibilidad.',
       footer: 'Street Photography'
     }]
   },
+  {
+    type: 'image',
+    data: [{  
+      url: `${TEST_IMG_PATH}/6.jpg`,
+      tag: 'Retrato & Autor',
+      caption: 'Exploración de retratos expresivos e historias humanas en el territorio.',
+      footer: 'Retrato'
+    }]
+  }
 ];
+

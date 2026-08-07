@@ -1,50 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paola | Communication Digital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio — Paola Andrea Muelas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <main>
-        <section class="hero">
-            <div class="hero__container">
-                <div class="hero__content">
-                    <h1 class="hero__title"></h1>
-                    <p class="hero__subtitle"></p>
-                    <p class="hero__description"></p>
-                    <div class="hero__actions"></div>
-                </div>
-                <div class="hero__image"></div>
-            </div>
-        </section>
+<main>
 
-        <section class="about">
-            <div class="about__container">
-                <div class="about__content">
-                    <h2 class="about__title"></h2>
-                    <p class="about__description"></p>
-                </div>
-            </div>
-        </section>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <p class="hero__eyebrow"></p>
+                <h1 class="hero__title"></h1>
+                <h2 class="hero__subtitle"></h2>
+                <p class="hero__description"></p>
 
-        <section class="contact">
-            <div class="contact__container">
-                <div class="contact__content">
-                    <h2 class="contact__title"></h2>
-                    <div class="contact__actions"></div>
-                </div>
-            </div>
-        </section>
-    </main>
+                <div class="hero__actions"></div>
 
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__content"></div>
+                <div class="hero__social"></div>
+            </div>
+
+            <div class="hero__image"></div>
         </div>
-    </footer>
+    </section>
 
-    <script src="js/main.js" defer></script>
+    <!-- Sobre mí -->
+    <section class="about">
+        <div class="about__container">
+            <div class="about__content">
+                <h2 class="about__title"></h2>
+                <p class="about__description"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services">
+        <div class="services__container">
+            <div class="services__header">
+                <h2 class="services__title"></h2>
+                <p class="services__description"></p>
+            </div>
+
+            <div class="services__grid">
+
+                <article class="service-card"></article>
+                <article class="service-card"></article>
+                <article class="service-card"></article>
+                <article class="service-card"></article>
+                <article class="service-card"></article>
+                <article class="service-card"></article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section class="portfolio">
+        <div class="portfolio__container">
+
+            <div class="portfolio__header">
+                <h2 class="portfolio__title"></h2>
+                <p class="portfolio__description"></p>
+            </div>
+
+            <!-- Producción audiovisual -->
+            <section class="portfolio-category">
+                <div class="portfolio-category__header">
+                    <h3 class="portfolio-category__title"></h3>
+                    <p class="portfolio-category__description"></p>
+                </div>
+
+                <!-- Gobierno -->
+                <section class="project-group">
+                    <div class="project-group__header">
+                        <h4 class="project-group__title"></h4>
+                        <p class="project-group__description"></p>
+                    </div>
+
+                    <div class="project-group__gallery"></div>
+                </section>
+
+                <!-- Educación -->
+                <section class="project-group">
+                    <div class="project-group__header">
+                        <h4 class="project-group__title"></h4>
+                        <p class="project-group__description"></p>
+                    </div>
+
+                    <div class="project-group__gallery"></div>
+                </section>
+
+                <!-- Editorial -->
+                <section class="project-group">
+                    <div class="project-group__header">
+                        <h4 class="project-group__title"></h4>
+                        <p class="project-group__description"></p>
+                    </div>
+
+                    <div class="project-group__gallery"></div>
+                </section>
+            </section>
+
+            <!-- Diseño -->
+            <section class="portfolio-category">
+                <div class="portfolio-category__header">
+                    <h3 class="portfolio-category__title"></h3>
+                    <p class="portfolio-category__description"></p>
+                </div>
+
+                <div class="portfolio-category__gallery"></div>
+            </section>
+
+            <!-- Fotografía -->
+            <section class="portfolio-category">
+                <div class="portfolio-category__header">
+                    <h3 class="portfolio-category__title">Fotografía</h3>
+                    <p class="portfolio-category__description">Galería de imágenes y fotoperiodismo</p>
+                </div>
+
+                <div class="portfolio-category__gallery">
+                    <div id="gallery-grid" class="gallery-grid"></div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="experience">
+        <div class="experience__container">
+            <div class="experience__header">
+                <h2 class="experience__title"></h2>
+                <p class="experience__description"></p>
+            </div>
+
+            <div class="experience__timeline"></div>
+        </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="metrics">
+        <div class="metrics__container">
+            <div class="metrics__header">
+                <h2 class="metrics__title"></h2>
+                <p class="metrics__description"></p>
+            </div>
+
+            <div class="metrics__grid"></div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact">
+        <div class="contact__container">
+            <div class="contact__content">
+                <h2 class="contact__title"></h2>
+                <p class="contact__description"></p>
+
+                <div class="contact__actions"></div>
+
+                <div class="contact__social"></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+    <button class="lightbox__close" onclick="closeLightbox()" aria-label="Cerrar">&times;</button>
+    <button class="lightbox__prev" onclick="changeLightboxImage(-1)" aria-label="Anterior">&#10094;</button>
+    <div class="lightbox__content">
+        <img id="lightbox-img" class="lightbox__img" src="" alt="Vista ampliada" />
+        <div id="lightbox-counter" class="lightbox__counter"></div>
+    </div>
+    <button class="lightbox__next" onclick="changeLightboxImage(1)" aria-label="Siguiente">&#10095;</button>
+</div>
+
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__content"></div>
+    </div>
+</footer>
+
+<script src="js/resources.js" defer></script>
+<script src="js/gallery.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
