@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Actualizacion V2.md",
+                "file": "tasks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Actualizacion V2"
+              "title": "tasks"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "byModifiedTime",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -183,7 +185,7 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "d06449faeccf4917",
+  "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
     "Actualizacion V2.md",
     "index.md",
