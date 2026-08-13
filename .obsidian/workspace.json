@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tasks.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tasks"
+              "title": "README"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 425.1571350097656
   },
   "right": {
     "id": "cb9045b55c72d648",
@@ -178,15 +178,17 @@
     "hiddenItems": {
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false
     }
   },
   "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
+    "requirements.md",
+    "design.md",
+    "tasks.md",
+    "README.md",
     "Actualizacion V2.md",
     "index.md",
     "02-que-hago-2026-07-10-1630/sobremi.svg",
