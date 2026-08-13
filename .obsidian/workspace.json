@@ -96,11 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
                 "file": "requirements.md",
-=======
-                "file": "readme.md",
->>>>>>> 132942d89983e6bdc6082c8a0ab5dbf1d07f4ed1
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de readme"
+              "title": "Enlaces entrantes"
             }
           },
           {
@@ -175,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,60 +182,34 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "d06449faeccf4917",
+  "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "validar.py",
-    "Sin confirmar 445824.crdownload",
-    "assets/images/img.svg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/5_VELATON.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/4_VELATON.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/3_VELATON.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/2_VELATON.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/1_VELATON.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA",
-    "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/7_ACRE.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/6_ACRE.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/5_ACRE.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/4_ACRE.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027",
-    "assets/images/IMAGENES/FOTOGRAFÍA/OCASO DE LOS ÍDOLOS",
-    "assets/images/IMAGENES/FOTOGRAFÍA",
-    "assets/images/IMAGENES/DISEÑO DIGITAL/POST",
-    "assets/images/IMAGENES/DISEÑO DIGITAL/CARRUSEL",
-    "assets/images/IMAGENES/DISEÑO DIGITAL",
-    "assets/images/IMAGENES",
-    "requirements.md",
-    "assets/images",
-    "design.md",
-=======
-    "__pycache__/subir.cpython-312.pyc.140293123159024",
-    "test.md",
-    "__pycache__/bajar.cpython-312.pyc",
-    "assets/images/img.svg",
-    "__pycache__/subir.cpython-312.pyc",
-    "__pycache__",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/5_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/4_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/3_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/2_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/1_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA",
+    "assets/images/FOTOGRAFIA/RUTA 2027/7_ACRE.jpg",
+    "assets/images/FOTOGRAFIA/RUTA 2027/6_ACRE.jpg",
+    "assets/images/FOTOGRAFIA/RUTA 2027/5_ACRE.jpg",
+    "assets/images/FOTOGRAFIA/RUTA 2027/4_ACRE.jpg",
+    "assets/images/FOTOGRAFIA/RUTA 2027/3_ACRE.jpg",
     "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/4_OCASO.jpg",
-    "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/3_OCASO.jpg",
-    "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/1_OCASO.jpg",
-    "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/2_OCASO.jpg",
     "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS",
-    "assets/images/FOTOGRAFIA/VELATÓN POR EL CAUCA",
     "assets/images/FOTOGRAFIA/RUTA 2027",
-    "assets/images/FOTOGRAFIA/OCASO DE LOS ÍDOLOS",
     "assets/images/FOTOGRAFIA",
     "assets/images/DISENO DIGITAL/POST",
+    "assets/images/DISENO DIGITAL/CARRUSEL",
+    "assets/images/DISENO DIGITAL",
+    "validar.py",
+    "Sin confirmar 445824.crdownload",
+    "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA",
     "requirements.md",
->>>>>>> 132942d89983e6bdc6082c8a0ab5dbf1d07f4ed1
-    "README.md",
     "design.md",
+    "README.md",
     "tasks.md",
+    "Holiwis picioso.md",
     "Actualizacion V2.md",
     "index.md",
     "plan_estructura.md",
