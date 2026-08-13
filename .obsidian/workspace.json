@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "requirements.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "requirements"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 425.1571350097656
+    "width": 200
   },
   "right": {
     "id": "cb9045b55c72d648",
@@ -185,10 +185,9 @@
   },
   "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
-    "requirements.md",
-    "design.md",
     "tasks.md",
     "README.md",
+    "design.md",
     "Actualizacion V2.md",
     "index.md",
     "02-que-hago-2026-07-10-1630/sobremi.svg",
