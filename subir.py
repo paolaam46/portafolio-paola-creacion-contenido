@@ -42,9 +42,9 @@ def main():
     else:
         try:
             user_input = input("💬 Ingresa el mensaje del commit (Enter para mensaje por defecto): ").strip()
-            commit_msg = user_input if user_input else f"Actualización automática {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+            commit_msg = user_input if user_input else datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         except (KeyboardInterrupt, EOFError):
-            commit_msg = f"Actualización automática {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+            commit_msg = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     # Verificación de cambios locales
     status_res = run_cmd(["git", "status", "--porcelain"], cwd=repo_dir)
