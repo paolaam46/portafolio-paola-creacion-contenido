@@ -65,12 +65,14 @@ Contribuí a transformar la comunicación de la Editorial Universidad del Cauca,
 
 ![[1_FUNCIONARIO.jpg|219]]![[2_FUNCIONARIO.jpg|222]]![[3_FUNCIONARIO.jpg|221]]![[4_FUNCIONARIO.jpg|221]]![[5_FUNCIONARIO.jpg|219]]
 ### Post:
-![[1_REDES.jpeg|342]]
+![[1_REDES.jpeg|227]]![[2_REDES.jpeg|287]]![[3_REDES.jpg|226]]
 
 ## FOTOGRAFÍA (Cubrimientos y Conceptos)
 
 ### Velatón por el Cauca:
 
+![[1_VELATON.jpg|303]]![[2_VELATON.jpg|232]]![[3_VELATON.jpg|302]]![[4_VELATON.jpg|260]]![[5_VELATON.jpg|301]]
 ### Súbete al Bus de la Acreditación:
-
+![[1_ACRE.jpg|299]]![[2_ACRE.jpg|299]]![[3_ACRE.jpg|297]]![[4_ACRE.jpg|317]]![[5_ACRE.jpg|295]]![[6_ACRE.jpg|298]]![[7_ACRE.jpg|296]]
 ### El Ocaso de los ídolos:
+![[1_OCASO.jpg|333]]![[2_OCASO.jpg|333]]![[3_OCASO.jpg|337]]![[4_OCASO.jpg|340]]
