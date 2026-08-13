@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "requirements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de readme"
+              "title": "Enlaces entrantes"
             }
           },
           {
@@ -171,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,11 +184,11 @@
   },
   "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
-    "README.md",
+    "Holiwis picioso.md",
     "requirements.md",
-    "requirements.md",
-    "design.md",
     "tasks.md",
+    "README.md",
+    "design.md",
     "Actualizacion V2.md",
     "index.md",
     "02-que-hago-2026-07-10-1630/sobremi.svg",
