@@ -182,8 +182,10 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "1f954b6e0c7c990d",
+  "active": "d06449faeccf4917",
   "lastOpenFiles": [
+    "validar.py",
+    "Sin confirmar 445824.crdownload",
     "assets/images/img.svg",
     "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/5_VELATON.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/4_VELATON.jpg",
@@ -195,7 +197,6 @@
     "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/6_ACRE.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/5_ACRE.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/4_ACRE.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/3_ACRE.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027",
     "assets/images/IMAGENES/FOTOGRAFÍA/OCASO DE LOS ÍDOLOS",
     "assets/images/IMAGENES/FOTOGRAFÍA",
@@ -205,7 +206,6 @@
     "assets/images/IMAGENES",
     "requirements.md",
     "assets/images",
-    "assets",
     "design.md",
     "README.md",
     "tasks.md",
