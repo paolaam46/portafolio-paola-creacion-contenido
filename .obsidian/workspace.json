@@ -11,14 +11,12 @@
             "id": "1f954b6e0c7c990d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "requirements.md",
-                "mode": "source",
-                "source": false
+                "file": "assets/images/img.svg"
               },
-              "icon": "lucide-file",
-              "title": "requirements"
+              "icon": "lucide-image",
+              "title": "img"
             }
           }
         ]
@@ -183,8 +181,13 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "d06449faeccf4917",
+  "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
+    "test.md",
+    "__pycache__/bajar.cpython-312.pyc",
+    "assets/images/img.svg",
+    "__pycache__/subir.cpython-312.pyc",
+    "__pycache__",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/5_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/4_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/3_VELATON.jpg",
@@ -196,17 +199,11 @@
     "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/1_OCASO.jpg",
     "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/2_OCASO.jpg",
     "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS",
-    "assets/images/FOTOGRAFIA/VELATÓN POR EL CAUCA/5_VELATON.jpg",
-    "assets/images/FOTOGRAFIA/VELATÓN POR EL CAUCA/4_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATÓN POR EL CAUCA",
     "assets/images/FOTOGRAFIA/RUTA 2027",
     "assets/images/FOTOGRAFIA/OCASO DE LOS ÍDOLOS",
     "assets/images/FOTOGRAFIA",
     "assets/images/DISENO DIGITAL/POST",
-    "assets/images/DISENO DIGITAL/CARRUSEL",
-    "assets/images/DISENO DIGITAL",
-    "assets/images/FOTOGRAFÍA/VELATÓN POR EL CAUCA",
-    "test.md",
     "requirements.md",
     "README.md",
     "design.md",

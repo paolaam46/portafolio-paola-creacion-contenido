@@ -26,3 +26,4 @@ node_modules/
 
 # Local backups
 *.bak
+__pycache__
