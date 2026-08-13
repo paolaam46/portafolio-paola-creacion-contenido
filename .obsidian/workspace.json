@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "requirements.md",
+                "file": "Holiwis picioso.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "requirements"
+              "title": "Holiwis picioso"
             }
           }
         ]
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "requirements.md",
+                "file": "Holiwis picioso.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +182,7 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "d06449faeccf4917",
+  "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
     "tasks.md",
     "README.md",
