@@ -5,6 +5,8 @@ Thumbs.db
 # Editors and local tools
 .vscode/
 .idea/
+.obsidian/workspace.json
+
 
 # Logs and temp files
 *.log
