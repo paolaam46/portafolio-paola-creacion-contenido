@@ -26,3 +26,5 @@ node_modules/
 
 # Local backups
 *.bak
+__pycache__
+error_git_log.txt
