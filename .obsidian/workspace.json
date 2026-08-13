@@ -11,12 +11,14 @@
             "id": "1f954b6e0c7c990d",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "assets/images/img.svg"
+                "file": "requirements.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "img"
+              "icon": "lucide-file",
+              "title": "requirements"
             }
           }
         ]
@@ -94,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assets/images/img.svg",
+                "file": "requirements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,6 +184,7 @@
   },
   "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
+    "assets/images/img.svg",
     "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/5_VELATON.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/4_VELATON.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA/3_VELATON.jpg",
@@ -193,7 +196,6 @@
     "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/5_ACRE.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/4_ACRE.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/3_ACRE.jpg",
-    "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027/2_ACRE.jpg",
     "assets/images/IMAGENES/FOTOGRAFÍA/RUTA 2027",
     "assets/images/IMAGENES/FOTOGRAFÍA/OCASO DE LOS ÍDOLOS",
     "assets/images/IMAGENES/FOTOGRAFÍA",
