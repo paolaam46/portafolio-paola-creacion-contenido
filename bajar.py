@@ -25,6 +25,10 @@ def get_repo_dir():
     return None
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
     repo_dir = get_repo_dir()
     if not repo_dir:
         print("❌ No estás dentro de un repositorio Git.")
