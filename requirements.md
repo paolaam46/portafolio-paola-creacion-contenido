@@ -63,8 +63,9 @@ Contribuí a transformar la comunicación de la Editorial Universidad del Cauca,
 
 ### Carrusel:
 
-![[1_FUNCIONARIO.jpg|219]]![[2_FUNCIONARIO.jpg|222]]![[3_FUNCIONARIO.jpg|221]]![[4_FUNCIONARIO.jpg|221]]![[5_FUNCIONARIO.jpg]]
+![[1_FUNCIONARIO.jpg|219]]![[2_FUNCIONARIO.jpg|222]]![[3_FUNCIONARIO.jpg|221]]![[4_FUNCIONARIO.jpg|221]]![[5_FUNCIONARIO.jpg|219]]
 ### Post:
+![[1_REDES.jpeg|342]]
 
 ## FOTOGRAFÍA (Cubrimientos y Conceptos)
 
