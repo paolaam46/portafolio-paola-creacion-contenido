@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "requirements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de readme"
+              "title": "Enlaces entrantes"
             }
           },
           {
@@ -171,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,7 +182,7 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "1f954b6e0c7c990d",
+  "active": "d06449faeccf4917",
   "lastOpenFiles": [
     "tasks.md",
     "README.md",
