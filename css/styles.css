@@ -1,0 +1,324 @@
+/* ==========================================================================
+   PORTAFOLIO PAOLA — ESTILOS EDITORIAL MINIMALISTA & MOTOR DE GALERÍA
+   ========================================================================== */
+
+:root {
+  /* Dynamic Grid Variables for Gallery Engine */
+  --gcols: 20;
+  --grow: 20px;
+  --gsubcols: 12;
+  --gsubrow: 10;
+  --g-sub-h: 440;
+
+  /* Palette */
+  --bg-warm: #FAF8F5;
+  --green-forest: #1D2A1D;
+  --lavender: #C8B0D4;
+  --beige: #EADDCB;
+  --gray-dark: #444444;
+  --gray-light: #EFE9E4;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-warm);
+  color: var(--gray-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= PORTFOLIO CATEGORY & GALLERY ================= */
+
+.portfolio-category {
+  padding: 2rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.portfolio-category__header {
+  margin-bottom: 2rem;
+}
+
+.portfolio-category__title {
+  font-family: 'Playfair Display', Cormorant Garamond, serif;
+  font-size: 2.5rem;
+  color: var(--green-forest);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-category__description {
+  font-size: 1rem;
+  color: var(--gray-dark);
+  font-weight: 300;
+}
+
+/* Engine Container */
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--gcols, 20), 1fr);
+  grid-auto-rows: var(--grow, 20px);
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+/* Card item */
+.g-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.g-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+.g-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  background-color: var(--gray-light);
+}
+
+.g-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.g-item:hover .g-img {
+  transform: scale(1.04);
+}
+
+.g-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 42, 29, 0.45);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.g-item:hover .g-overlay {
+  opacity: 1;
+}
+
+/* Captions inside main items */
+.g-caption-container {
+  padding: 1.25rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-top: 1px solid var(--gray-light);
+}
+
+.g-caption-container span {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--lavender);
+  text-transform: uppercase;
+  display: block;
+}
+
+.g-caption-container p {
+  font-size: 0.85rem;
+  color: var(--gray-dark);
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.g-caption-container div {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--green-forest);
+  letter-spacing: 0.05em;
+}
+
+/* Sub-section UnicaUCA */
+.g-subsection {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: var(--green-forest);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.g-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--gsubcols, 12), 1fr);
+  grid-auto-rows: var(--gsubrow, 10px);
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.g-item--sub {
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.g-sub-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 12px 12px;
+  background: linear-gradient(to top, rgba(29, 42, 29, 0.95), transparent);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 15, 0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lightbox__content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transition: opacity 0.18s ease;
+}
+
+.lightbox__img.lb-fade {
+  opacity: 0;
+}
+
+.lightbox__counter {
+  color: var(--white);
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+}
+
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 1010;
+}
+
+.lightbox__close:hover,
+.lightbox__prev:hover,
+.lightbox__next:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.lightbox__close {
+  top: 24px;
+  right: 24px;
+}
+
+.lightbox__prev {
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__prev:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lightbox__next {
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__next:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+body.lightbox-active {
+  overflow: hidden;
+}
+
+/* Breakpoint Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --gcols: 10;
+    --gsubcols: 6;
+  }
+
+  .portfolio-category__title {
+    font-size: 1.75rem;
+  }
+}
