@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "requirements.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "requirements"
             }
           }
         ]
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de readme"
             }
           },
           {
@@ -115,12 +115,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de README"
+              "title": "Enlaces salientes de readme"
             }
           },
           {
@@ -158,20 +158,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "readme.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de README"
+              "title": "Esquema de readme"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,33 +185,31 @@
   },
   "active": "1f954b6e0c7c990d",
   "lastOpenFiles": [
-    "validar.py",
-    "requirements.md",
+    "tasks.md",
+    "README.md",
     "design.md",
+    "requirements.md",
+    "validar.py",
     "assets/images/img.svg",
+    "__pycache__/validar.cpython-312.pyc",
+    "__pycache__/subir.cpython-312.pyc.140293123159024",
+    "test.md",
+    "__pycache__/bajar.cpython-312.pyc",
+    "__pycache__/subir.cpython-312.pyc",
+    "__pycache__",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/5_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/4_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/3_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/2_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA/1_VELATON.jpg",
     "assets/images/FOTOGRAFIA/VELATON POR EL CAUCA",
-    "assets/images/FOTOGRAFIA/RUTA 2027/7_ACRE.jpg",
-    "assets/images/FOTOGRAFIA/RUTA 2027/6_ACRE.jpg",
-    "assets/images/FOTOGRAFIA/RUTA 2027/5_ACRE.jpg",
-    "assets/images/FOTOGRAFIA/RUTA 2027/4_ACRE.jpg",
-    "assets/images/FOTOGRAFIA/RUTA 2027/3_ACRE.jpg",
     "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/4_OCASO.jpg",
+    "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/3_OCASO.jpg",
+    "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/1_OCASO.jpg",
+    "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS/2_OCASO.jpg",
     "assets/images/FOTOGRAFIA/OCASO DE LOS IDOLOS",
+    "assets/images/FOTOGRAFIA/VELATÓN POR EL CAUCA",
     "assets/images/FOTOGRAFIA/RUTA 2027",
-    "assets/images/FOTOGRAFIA",
-    "assets/images/DISENO DIGITAL/POST",
-    "assets/images/DISENO DIGITAL/CARRUSEL",
-    "assets/images/DISENO DIGITAL",
-    "Sin confirmar 445824.crdownload",
-    "assets/images/IMAGENES/FOTOGRAFÍA/VELATÓN POR EL CAUCA",
-    "README.md",
-    "tasks.md",
-    "Holiwis picioso.md",
     "Actualizacion V2.md",
     "index.md",
     "plan_estructura.md",
