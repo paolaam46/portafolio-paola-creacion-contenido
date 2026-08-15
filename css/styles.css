@@ -1,223 +1,1707 @@
 /* ==========================================================================
-   PORTAFOLIO PAOLA — ESTILOS EDITORIAL MINIMALISTA & MOTOR DE GALERÍA
+   PORTAFOLIO PAOLA ANDREA — ESTÉTICA SCRAPBOOK / HANDMADE EDITORIAL
    ========================================================================== */
 
+/* ─── 1. VARIABLES Y DESIGN TOKENS ────────────────────────────────────────── */
 :root {
-  /* Dynamic Grid Variables for Gallery Engine */
-  --gcols: 20;
-  --grow: 20px;
-  --gsubcols: 12;
-  --gsubrow: 10;
-  --g-sub-h: 440;
+  /* Paleta Oficial Scrapbook */
+  --purple-main: #4B4291;
+  --purple-dark: #12110C;
+  --purple-light: #675CBF;
+  --lavender-highlight: #C1BAD9;
+  --lavender-subtle: #E8E4F2;
+  --black-ink: #111111;
+  --paper-base: #F2EDEA;
+  --paper-card: #F9F4F1;
 
-  /* Palette */
-  --bg-warm: #FAF8F5;
-  --green-forest: #1D2A1D;
-  --lavender: #C8B0D4;
-  --beige: #EADDCB;
-  --gray-dark: #444444;
-  --gray-light: #EFE9E4;
-  --white: #FFFFFF;
+  --paper-cream: #F5EFEB;
+  --paper-sheet: #FFFFFF;
+  --text-dark: #222222;
+  --text-muted: #555555;
+  --tape-color: rgba(243, 233, 216, 0.72);
+  --tape-border: rgba(210, 195, 175, 0.45);
+
+  /* Sombras Físicas de Papel */
+  --shadow-paper: 0 10px 30px -8px rgba(18, 17, 12, 0.08), 0 2px 6px -1px rgba(18, 17, 12, 0.04);
+  --shadow-card: 0 15px 35px -5px rgba(18, 17, 12, 0.1), 0 5px 12px rgba(18, 17, 12, 0.04);
+  --shadow-polaroid: 0 12px 28px -4px rgba(18, 17, 12, 0.12), 0 3px 8px rgba(18, 17, 12, 0.06);
+  --shadow-floating: 0 20px 45px -8px rgba(75, 66, 145, 0.18), 0 8px 16px rgba(18, 17, 12, 0.06);
+  --shadow-relief: 3px 4px 0px var(--purple-dark);
+
+  /* Tipografías */
+  --font-backdrop: 'Bebas Neue', 'Syne', sans-serif;
+  --font-hand: 'Kalam', 'Caveat', cursive, sans-serif;
+  --font-accent: 'Caveat', cursive, sans-serif;
+  --font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transiciones */
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+
+  /* Efecto Ripped Paper (97px de recorte inferior) */
+  --ripped-paper-offset: 107px;
 }
 
-* {
+/* ─── 2. RESET Y BASES ────────────────────────────────────────────────────── */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--paper-base);
+}
+
 body {
-  background-color: var(--bg-warm);
-  color: var(--gray-dark);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
-}
-
-/* ================= PORTFOLIO CATEGORY & GALLERY ================= */
-
-.portfolio-category {
-  padding: 2rem 1rem;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.portfolio-category__header {
-  margin-bottom: 2rem;
-}
-
-.portfolio-category__title {
-  font-family: 'Playfair Display', Cormorant Garamond, serif;
-  font-size: 2.5rem;
-  color: var(--green-forest);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.portfolio-category__description {
-  font-size: 1rem;
-  color: var(--gray-dark);
-  font-weight: 300;
-}
-
-/* Engine Container */
-#gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(var(--gcols, 20), 1fr);
-  grid-auto-rows: var(--grow, 20px);
-  gap: 12px;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--paper-base);
+  line-height: 1.65;
+  overflow-x: hidden;
   position: relative;
+  -webkit-font-smoothing: antialiased;  
+}
+
+/* Textura sutil de papel artesanal en todo el body */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.25' numOctaves='2' seed='10' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 2 -0.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: cover;
+}
+main {
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='paperEffect'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise' /%3E%3CfeDiffuseLighting in='noise' lightingColor='%23fff' surfaceScale='2' result='texture'%3E%3CfeDistantLight azimuth='45' elevation='60' /%3E%3C/feDiffuseLighting%3E%3CfeTurbulence type='turbulence' baseFrequency='0.05' numOctaves='3' seed='5' result='tornNoise' /%3E%3CfeDisplacementMap in='SourceGraphic' in2='tornNoise' scale='10' xChannelSelector='R' yChannelSelector='G' result='tornEdges' /%3E%3CfeBlend in='texture' in2='tornEdges' mode='multiply' result='combined' /%3E%3C/filter%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='%23ffffff' opacity='0.60' filter='url(%23paperEffect)' /%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+
+::selection {
+  background: var(--lavender-highlight);
+  color: var(--purple-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─── 3. CLASES UTILITARIAS Y TIPOGRAFÍA SCRAPBOOK ───────────────────────── */
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.text-purple {
+  color: var(--purple-main);
+}
+
+.text-dark {
+  color: var(--purple-dark);
+}
+
+.bg-paper {
+  background-color: var(--paper-base);
+}
+
+/* Resaltador Marcador Lavanda (#C1BAD9) con bordes imperfectos */
+.highlighter {
+  background: linear-gradient(104deg, rgba(193, 186, 217, 0) 0.5%, rgba(193, 186, 217, 0.85) 2.5%, rgba(193, 186, 217, 0.75) 97%, rgba(193, 186, 217, 0) 99.5%);
+  padding: 0.15em 0.4em;
+  border-radius: 0.8em 0.3em 0.9em 0.2em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  font-weight: 600;
+  color: var(--purple-dark);
+}
+
+/* Subrayado irregular dibujado a mano */
+.hand-drawn-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hand-drawn-underline::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  bottom: -6px;
+  width: calc(100% + 8px);
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6 Q 25 2, 50 6 T 98 5' stroke='%234B4291' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Cintas Adhesivas Washi Tape */
+.washi-tape {
+  position: absolute;
+  width: 90px;
+  height: 26px;
+  background-color: var(--tape-color);
+  border: 1px solid var(--tape-border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  z-index: 10;
+  pointer-events: none;
+  backdrop-filter: blur(1px);
+}
+
+.washi-tape--top-left {
+  top: -12px;
+  left: 15px;
+  transform: rotate(-7deg);
+}
+
+.washi-tape--top-right {
+  top: -12px;
+  right: 15px;
+  transform: rotate(6deg);
+}
+
+.washi-tape--top-center {
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 110px;
+}
+
+.washi-tape--corner {
+  top: -10px;
+  right: -10px;
+  transform: rotate(35deg);
+  width: 70px;
+  height: 22px;
+}
+
+.washi-tape--center {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(2deg);
+  width: 80px;
+  height: 22px;
+}
+
+/* Ligeras inclinaciones naturales de papel */
+.tilt-1 { transform: rotate(-1.5deg); }
+.tilt-2 { transform: rotate(1.8deg); }
+.tilt-3 { transform: rotate(-2.2deg); }
+.tilt-4 { transform: rotate(1.2deg); }
+
+/* Borde Rasgado Superior / Inferior */
+.torn-paper-edge-top {
+  position: relative;
+}
+.torn-paper-edge-top::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 18' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,18 L0,8 Q20,1 40,9 T80,12 T120,4 T160,11 T200,6 T240,14 T280,3 T320,11 T360,7 T400,15 T440,4 T480,10 T520,6 T560,14 T600,3 T640,11 T680,5 T720,13 T760,4 T800,9 T840,5 T880,13 T920,4 T960,11 T1000,6 T1040,14 T1080,4 T1120,10 T1160,5 T1200,12 L1200,18 Z' fill='%23FAF8F5'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.torn-paper-edge-bottom {
+  position: relative;
+}
+.torn-paper-edge-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 18' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L0,10 Q20,17 40,9 T80,6 T120,14 T160,7 T200,12 T240,4 T280,15 T320,7 T360,11 T400,3 T440,14 T480,8 T520,12 T560,4 T600,15 T640,7 T680,13 T720,5 T760,14 T800,9 T840,13 T880,5 T920,14 T960,7 T1000,12 T1040,4 T1080,14 T1120,8 T1160,13 T1200,6 L1200,0 Z' fill='%23FAF8F5'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+/* ─── 4. HEADER / NAVEGACIÓN SCRAPBOOK ────────────────────────────────────── */
+.scrapbook-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px dashed transparent;
+  box-shadow: none;
+  transition: background 0.35s ease, backdrop-filter 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Estado activo con Scroll: Fondo con blur, borde y sombra completa */
+.scrapbook-nav.scrapbook-nav--scrolled {
+  background: rgba(242, 237, 234, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: rgba(75, 66, 145, 0.25);
+  box-shadow: 0 4px 18px rgba(18, 17, 12, 0.05);
+}
+
+.scrapbook-nav__container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0.35rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: padding 0.35s ease;
+}
+
+.scrapbook-nav.scrapbook-nav--scrolled .scrapbook-nav__container {
+  padding: 0.75rem 1.5rem;
+}
+
+.scrapbook-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+  transition: gap 0.35s ease;
+}
+
+.scrapbook-nav.scrapbook-nav--scrolled .scrapbook-nav__brand {
+  gap: 0.6rem;
+}
+
+/* Avatar izquierdo: Oculto inicialmente en scroll 0, visible al hacer scroll */
+.scrapbook-nav__avatar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transform: scale(0);
+  border: 0 solid var(--purple-main);
+  object-fit: cover;
+  background-color: var(--lavender-subtle);
+  box-shadow: none;
+  pointer-events: none;
+  transition: width 0.35s ease, height 0.35s ease, opacity 0.3s ease, transform 0.35s ease, border-width 0.35s ease, box-shadow 0.35s ease;
+}
+
+.scrapbook-nav.scrapbook-nav--scrolled .scrapbook-nav__avatar {
+  width: 42px;
+  height: 42px;
+  opacity: 1;
+  transform: scale(1);
+  border-width: 2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  pointer-events: auto;
+}
+
+.scrapbook-nav__name {
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--purple-main);
+  line-height: 1.1;
+  transition: font-size 0.35s ease;
+}
+
+.scrapbook-nav__role {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.scrapbook-nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.scrapbook-nav__link {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  position: relative;
+  padding: 0.3rem 0;
+  transition: var(--transition-fast);
+}
+
+.scrapbook-nav__link:hover {
+  color: var(--purple-main);
+}
+
+.scrapbook-nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--purple-main);
+  transition: var(--transition-fast);
+  border-radius: 2px;
+}
+
+.scrapbook-nav__link:hover::after {
   width: 100%;
 }
 
-/* Card item */
-.g-item {
+.scrapbook-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--purple-main);
+  color: #FFFFFF;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(75, 66, 145, 0.28);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.scrapbook-btn-pill:hover {
+  background-color: var(--purple-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(18, 17, 12, 0.25);
+  color: #FFFFFF;
+}
+
+.scrapbook-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--purple-main);
+  padding: 0.55rem 1.3rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1.5px solid var(--purple-main);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.scrapbook-btn-outline:hover {
+  background-color: var(--purple-main);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--purple-main);
+  cursor: pointer;
+}
+
+.scrapbook-nav__mobile-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--paper-card);
+  padding: 1.5rem;
+  border-bottom: 2px dashed var(--purple-main);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.scrapbook-nav__mobile-dropdown.is-open {
+  display: flex;
+}
+
+/* ─── 5. HERO SECTION (PORTAFOLIO GIGANTE + RETRATO POLA + DOODLES) ─────── */
+.hero-scrapbook {
+  padding-top: 3.8rem;
+  padding-bottom: 3rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
-  cursor: pointer;
+  width: 100%;
+
+}
+
+.hero-scrapbook__paper-bg {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  /* background-color: var(--paper-card); */
+  
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  position: relative;
+  border: none;
+
+  /* background-image: url('../assets/images/graficos/ripped-paper.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover; */
+  overflow: hidden;
+}
+
+/* Showcase Superior: Contenedor con doodles y retrato con fondo de papel rasgado */
+.hero-scrapbook__showcase {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  padding: 2.5rem 1.5rem calc(2.5rem + var(--ripped-paper-offset, 97px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../assets/images/graficos/ripped-paper.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 3;
+  filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.12));
+}
+
+/* Garabatos SVG posicionados en esquinas del showcase */
+.hero-doodle-left-container {
+  position: absolute;
+  top: 15px;
+  left: clamp(10px, 5vw, 60px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-doodle-right-container {
+  position: absolute;
+  top: 15px;
+  right: clamp(10px, 5vw, 60px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-doodle-left,
+.hero-doodle-right {
+  width: clamp(110px, 12vw, 180px);
+  height: auto;
+}
+
+/* Gran Título "PORTAFOLIO" ubicado detrás de la fotografía */
+.hero-backdrop-title-wrapper {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  align-items: center;
+  justify-content: center;
 }
 
-.g-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+.hero-backdrop-title {
+  display: inline-flex;
+  justify-content: center;
+  align-items: baseline;
+  font-family: 'Bebas Neue', 'Syne', sans-serif;
+  font-size: clamp(6.2rem, 17.5vw, 17rem);
+  font-weight: 700;
+  letter-spacing: clamp(0.01em, 0.4vw, 0.04em);
+  color: var(--purple-main);
+  opacity: 0.88;
+  text-shadow: 4px 6px 0px var(--purple-dark), -2px -2px 0px rgba(255,255,255,0.4);
+  line-height: 0.8;
+  user-select: none;
+  text-transform: uppercase;
 }
 
-.g-img-wrap {
+/* Variaciones más marcadas y dinámicas de rotación, tamaño y posición por letra */
+.hero-backdrop-char {
+  display: inline-block;
+  transform-origin: center center;
+  position: relative;
+  pointer-events: auto;
+  cursor: default;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.hero-backdrop-char:nth-child(1) { transform: rotate(-3.5deg) scale(1.21) translateY(-2px); }
+.hero-backdrop-char:nth-child(2) { transform: rotate(2.8deg) scale(0.95) translateY(-5px); }
+.hero-backdrop-char:nth-child(3) { transform: rotate(-2.2deg) scale(0.88) translateY(3px); }
+.hero-backdrop-char:nth-child(4) { transform: rotate(3.4deg) scale(1.04) translateY(-3px); }
+.hero-backdrop-char:nth-child(5) { transform: rotate(-2.8deg) scale(0.95) translateY(4px); }
+.hero-backdrop-char:nth-child(6) { transform: rotate(2.6deg) scale(1.06) translateY(-6px); }
+.hero-backdrop-char:nth-child(7) { transform: rotate(-3.5deg) scale(0.97) translateY(2px); }
+.hero-backdrop-char:nth-child(8) { transform: rotate(3.2deg) scale(1.03) translateY(-4px); }
+.hero-backdrop-char:nth-child(9) { transform: rotate(-2.6deg) scale(0.94) translateY(5px); }
+.hero-backdrop-char:nth-child(10) { transform: rotate(2.4deg) scale(1.07) translateY(-2px); }
+
+/* Micro-animación al pasar el cursor por cada letra */
+.hero-backdrop-char:hover {
+  transform: translateY(-12px) scale(1.15) !important;
+  color: var(--purple-light);
+  text-shadow: 6px 10px 0px var(--purple-dark), -2px -2px 0px rgba(255, 255, 255, 0.5);
+  z-index: 5;
+}
+
+/* Banner tipo pincelada/marcador debajo de PORTAFOLIO */
+.hero-role-brush-badge {
+  display: inline-block;
+  background-color: var(--black-ink);
+  color: #FFFFFF;
+  font-family: var(--font-hand);
+  font-size: clamp(0.8rem, 1.6vw, 1.25rem);
+  font-weight: 700;
+  padding: 0.35rem 1.6rem;
+  border-radius: 25px 6px 28px 8px;
+  transform: rotate(-2deg) translateY(-10px);
+  box-shadow: 0 4px 12px rgba(18, 17, 12, 0.25);
+  letter-spacing: 0.08em;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-role-brush-badge::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 15%;
+  width: 70%;
+  height: 3px;
+  background: var(--black-ink);
+  border-radius: 2px;
+}
+
+/* Fotografía Principal de Paola (al frente en el centro, compacta y más arriba) */
+.hero-portrait-frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
+  z-index: 3;
+  transform: translateY(-22px);
+  filter: drop-shadow(7px 7px 0px rgba(75, 66, 145, 0.7))
+          drop-shadow(-7px 7px 0px rgba(75, 66, 145, 0.7))
+          drop-shadow(7px -7px 0px rgba(75, 66, 145, 0.7))
+          drop-shadow(-7px -7px 0px rgba(75, 66, 145, 0.4));
+  transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.hero-portrait-frame:hover {
+  transform: translateY(-26px);
+  filter: drop-shadow(12px 12px 1px rgba(75, 66, 145, 0.45))
+          drop-shadow(-12px 12px 1px rgba(75, 66, 145, 0.45))
+          drop-shadow(12px -12px 1px rgba(75, 66, 145, 0.45))
+          drop-shadow(-12px -12px 1px rgba(75, 66, 145, 0.45));
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 3;
+  transition: transform 0.5s ease;
+}
+
+.hero-portrait-frame:hover .hero-portrait-img {
+  transform: scale(1.02);
+}
+
+/* Etiqueta de Nota posicionada de forma absoluta a la derecha */
+.hero-note-tag {
+  position: absolute;
+  bottom: 54px;
+  right: clamp(15px, 6vw, 90px);
+  left: auto;
+  z-index: 5;
+  transform: rotate(3deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.hero-note-tag:hover {
+  transform: rotate(1deg) scale(1.04);
+}
+
+/* Solo la pastilla de texto tiene el fondo negro */
+.hero-note-text {
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  background-color: var(--black-ink);
+  padding: 0.55rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(18, 17, 12, 0.3);
+}
+
+.hero-note-text .text-purple {
+  color: var(--lavender-highlight);
+}
+
+/* Subrayado manuscrito negro por fuera debajo de la caja */
+.hero-note-underline {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  display: block;
+  opacity: 0.95;
+  filter: none; /* Conserva su color negro original */
+}
+
+/* Bloque Inferior del Hero (Contenido de texto) */
+.hero-scrapbook__body {
   position: relative;
   width: 100%;
-  height: 100%;
-  flex: 1;
-  overflow: hidden;
-  background-color: var(--gray-light);
+  padding: 1.5rem 2rem calc(3rem + var(--ripped-paper-offset, 107px));
+  min-height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.g-img {
+/* Columna Izquierda del Hero: Carnet Profesional Flotante */
+.hero-id-col {
+  position: absolute;
+  left: 3%;
+  top: -50px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Carnet Profesional Realista */
+.id-card-wrapper {
+  position: relative;
+  width: 310px;
+  margin: 0 auto;
+  padding-top: 5.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Lanyard SVG Ilustrado Realista */
+.lanyard-svg {
+  position: absolute;
+  top: -55px;
+  left: -112px;
+  width: 296px;
+  height: 300px;
+  z-index: 15;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(18, 17, 12, 0.25));
+}
+
+.id-card-wrapper .washi-tape--top-left {
+  top: 75px;
+  left: -12px;
+  transform: rotate(-9deg);
+  z-index: 6;
+}
+
+.id-card-wrapper .washi-tape--top-right {
+  top: 75px;
+  right: -12px;
+  transform: rotate(7deg);
+  z-index: 6;
+}
+
+.id-badge {
+  background: #FFFFFF;
+  background-clip: padding-box;
+  border: 8px solid rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  padding: 1.2rem 0.8rem;
+  box-shadow: 
+    0 0 0 1px rgba(75, 66, 145, 0.18),
+    0 20px 45px -8px rgba(18, 17, 12, 0.18),
+    inset 0 5px 0 var(--purple-main);
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-2.9deg);
+  transition: var(--transition-smooth);
+  width: 310px;
+  height: 440px;
+  backdrop-filter: blur(2px);
+}
+
+.id-badge:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 
+    0 0 0 1px rgba(75, 66, 145, 0.25),
+    var(--shadow-floating),
+    inset 0 5px 0 var(--purple-main);
+}
+
+/* Efecto plástico acrílico */
+.id-badge::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.1) 100%);
+  pointer-events: none;
+}
+
+.id-badge-hole {
+  width: 45px;
+  height: 10px;
+  background-color: var(--paper-base);
+  border-radius: 999px;
+  margin: 0 auto 0.9rem;
+  border: 1px solid #D0C8C0;
+}
+
+.id-badge-photo-wrap {
+  width: 255px;
+  height: 260px;
+  margin: 0 auto 1.2rem;
+  border-radius: 1rem;
+  border: 4px solid var(--lavender-highlight);
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  background-color: var(--lavender-subtle);
+}
+
+.id-badge-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  object-position: top center;
 }
 
-.g-item:hover .g-img {
-  transform: scale(1.04);
+.id-badge-info {
+  text-align: center;
 }
 
-.g-overlay {
+.id-badge-name {
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--purple-dark);
+  margin-bottom: 0.2rem;
+}
+
+.id-badge-role {
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  color: var(--purple-main);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.id-tag {
+  background-color: var(--paper-base);
+  color: var(--text-dark);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid var(--lavender-highlight);
+}
+
+/* Columna Centrada: Textos del Hero */
+.hero-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 1.3rem;
+  max-width: 790px;
+}
+
+.hero-main-title {
+  font-family: var(--font-hand);
+  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  color: var(--purple-dark);
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  color: var(--purple-main);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.hero-short-msg {
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  color: var(--purple-dark);
+  background-color: rgba(193, 186, 217, 0.4);
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--purple-main);
+  width: fit-content;
+}
+
+.hero-long-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* ─── 6. SECCIÓN ¿QUÉ HAGO? (SERVICIOS Y ESPECIALIDADES) ─────────────────── */
+.section-que-hago {
+  position: relative;
+  width: 100%;
+  padding: 5rem 1.5rem calc(5rem + var(--ripped-paper-offset, 107px));
+  background-image: url('../assets/images/graficos/ripped-paper.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+
+.skills-scrapbook-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.skill-sticky-note {
+  background-color: var(--paper-sheet);
+  border: 1px dashed var(--purple-main);
+  border-radius: 18px;
+  padding: 1.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  box-shadow: var(--shadow-paper);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.skill-sticky-note:hover {
+  transform: translateY(-5px) scale(1.02);
+  background-color: #FFFFFF;
+  border-style: solid;
+  box-shadow: var(--shadow-polaroid);
+}
+
+.skill-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--lavender-subtle);
+  color: var(--purple-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.skill-text {
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--purple-dark);
+  line-height: 1.35;
+}
+
+/* ── Software / Programas que maneja estilo Scrapbook ── */
+.software-scrapbook-block {
+  margin: 3.5rem auto 0;
+  background-color: var(--paper-sheet);
+  border-radius: 22px;
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(210, 195, 175, 0.55);
+  box-shadow: var(--shadow-paper);
+  position: relative;
+  transform: rotate(-0.8deg);
+  width: fit-content;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  transition: var(--transition-smooth);
+}
+
+.software-scrapbook-block:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: var(--shadow-polaroid);
+}
+
+.software-title {
+  font-family: var(--font-hand);
+  font-size: 1.7rem;
+  color: var(--purple-dark);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.software-icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.software-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--purple-dark);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 12px rgba(18, 17, 12, 0.18);
+  transition: var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.software-badge:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+.software-badge--pr {
+  background: #00005B;
+  color: #9999FF;
+  border: 1.5px solid #9999FF;
+}
+
+.software-badge--ae {
+  background: #00005B;
+  color: #D291FF;
+  border: 1.5px solid #D291FF;
+}
+
+.software-badge--ps {
+  background: #001E36;
+  color: #31A8FF;
+  border: 1.5px solid #31A8FF;
+}
+
+.software-badge--ai {
+  background: #330000;
+  color: #FF9A00;
+  border: 1.5px solid #FF9A00;
+}
+
+.software-badge--capcut {
+  background: #111111;
+  color: #FFFFFF;
+  border: 1.5px solid #FFFFFF;
+}
+
+.software-badge--canva {
+  background: #00C4CC;
+  color: #FFFFFF;
+}
+
+.software-star-doodle {
+  position: absolute;
+  bottom: -18px;
+  right: -12px;
+  pointer-events: none;
+}
+
+/* ─── 7. SECCIÓN DE VIDEO (PRODUCCIÓN Y POSPRODUCCIÓN) ───────────────────── */
+.section-videos {
+  position: relative;
+  width: 100%;
+  padding: 5rem 1.5rem calc(5rem + var(--ripped-paper-offset, 97px));
+  background-image: url('../assets/images/graficos/ripped-paper.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+
+.section-editorial-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  position: relative;
+}
+
+.section-editorial-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--lavender-subtle);
+  color: var(--purple-main);
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8rem;
+}
+
+.section-editorial-title {
+  font-family: var(--font-hand);
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+  color: var(--purple-dark);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.8rem;
+}
+
+.section-editorial-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* Bloque por Categoría de Video */
+.video-category-card {
+  max-width: 1320px;
+  margin: 0 auto 3.5rem;
+  background-color: var(--paper-card);
+  border-radius: 28px;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  border: 1px solid rgba(210, 195, 175, 0.45);
+}
+
+.video-category-header {
+  margin-bottom: 2.2rem;
+  max-width: 900px;
+}
+
+.video-category-badge {
+  display: inline-block;
+  background-color: var(--purple-main);
+  color: #FFFFFF;
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.video-category-title {
+  font-family: var(--font-hand);
+  font-size: 2.3rem;
+  color: var(--purple-dark);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.video-category-narrative {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  line-height: 1.75;
+}
+
+.video-category-narrative strong {
+  color: var(--purple-main);
+  font-weight: 700;
+}
+
+/* Grid de Videos */
+.videos-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.video-scrapbook-item {
+  background-color: var(--paper-sheet);
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow-polaroid);
+  position: relative;
+  border: 1px solid rgba(75, 66, 145, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.video-scrapbook-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Aspect Ratios para Iframes */
+.video-iframe-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-iframe-wrapper--16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.video-iframe-wrapper--9-16 {
+  aspect-ratio: 9 / 16;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.video-iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-item-meta {
+  padding-top: 1rem;
+}
+
+.video-item-title {
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--purple-dark);
+  margin-bottom: 0.3rem;
+}
+
+.video-item-note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ─── 8. SECCIÓN DE IMAGEN (DISEÑO DIGITAL) ───────────────────────────────── */
+.section-imagen {
+  position: relative;
+  width: 100%;
+  padding: 5rem 1.5rem calc(5rem + var(--ripped-paper-offset, 97px));
+  background-image: url('../assets/images/graficos/ripped-paper.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+
+.scrapbook-collection-card {
+  max-width: 1320px;
+  margin: 0 auto 3.5rem;
+  background-color: var(--paper-card);
+  border-radius: 28px;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  border: 1px solid rgba(210, 195, 175, 0.45);
+}
+
+.scrapbook-collection-header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.collection-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--lavender-subtle);
+  color: var(--purple-main);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.collection-title {
+  font-family: var(--font-hand);
+  font-size: 2.2rem;
+  color: var(--purple-dark);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.collection-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 850px;
+}
+
+/* Carrusel de Láminas */
+.carrusel-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.polaroid-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 0.8rem 0.8rem 1.2rem;
+  box-shadow: var(--shadow-polaroid);
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.polaroid-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-floating);
+}
+
+.polaroid-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--paper-base);
+}
+
+.polaroid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.polaroid-card:hover .polaroid-img {
+  transform: scale(1.06);
+}
+
+.polaroid-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(29, 42, 29, 0.45);
-  backdrop-filter: blur(2px);
+  background: rgba(75, 66, 145, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  color: var(--white);
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  text-align: center;
 }
 
-.g-item:hover .g-overlay {
+.polaroid-card:hover .polaroid-overlay {
   opacity: 1;
 }
 
-/* Captions inside main items */
-.g-caption-container {
-  padding: 1.25rem;
-  background-color: var(--white);
+.polaroid-label {
+  padding-top: 0.8rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.75rem;
-  border-top: 1px solid var(--gray-light);
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.g-caption-container span {
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--lavender);
-  text-transform: uppercase;
-  display: block;
+.polaroid-num {
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--purple-main);
 }
 
-.g-caption-container p {
+.polaroid-text {
   font-size: 0.85rem;
-  color: var(--gray-dark);
-  line-height: 1.4;
-  font-weight: 400;
-}
-
-.g-caption-container div {
-  font-size: 0.7rem;
+  color: var(--text-dark);
   font-weight: 600;
-  color: var(--green-forest);
-  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
-/* Sub-section UnicaUCA */
-.g-subsection {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  background-color: var(--green-forest);
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-.g-sub-grid {
+.posts-scrapbook-grid {
   display: grid;
-  grid-template-columns: repeat(var(--gsubcols, 12), 1fr);
-  grid-auto-rows: var(--gsubrow, 10px);
-  gap: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.collection-footer-action {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ─── 9. SECCIÓN DE FOTOGRAFÍA (CUBRIMIENTOS Y CONCEPTOS) ────────────────── */
+.section-fotografia {
+  position: relative;
+  width: 100%;
+  padding: 5rem 1.5rem calc(5rem + var(--ripped-paper-offset, 97px));
+  background-image: url('../assets/images/graficos/ripped-paper.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+
+.paper-sheet {
+  max-width: 1320px;
+  margin: 0 auto 3.5rem;
+  background-color: var(--paper-card);
+  border-radius: 28px;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  border: 1px solid rgba(210, 195, 175, 0.45);
+}
+
+.photo-serie-header {
+  margin-bottom: 2.2rem;
+}
+
+.serie-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.serie-badge {
+  background-color: var(--purple-main);
+  color: #FFFFFF;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.serie-count {
+  background-color: var(--lavender-subtle);
+  color: var(--purple-dark);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.serie-title {
+  font-size: 2.4rem;
+  color: var(--purple-dark);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.serie-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 900px;
+  line-height: 1.7;
+}
+
+/* Grid de Estampas y Fotografías Scrapbook */
+.photo-collage-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.photo-collage-grid--velaton {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.photo-collage-grid--acreditacion {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.photo-collage-grid--ocaso {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.photo-stamp {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 0.75rem 0.75rem 1rem;
+  box-shadow: var(--shadow-polaroid);
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.photo-stamp:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-floating);
+}
+
+.photo-stamp__wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: var(--paper-base);
+}
+
+.photo-stamp__img {
   width: 100%;
   height: 100%;
-  flex: 1;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.g-item--sub {
-  border-radius: 12px;
-  box-shadow: none;
+.photo-stamp:hover .photo-stamp__img {
+  transform: scale(1.05);
 }
 
-.g-sub-label {
+.photo-stamp__overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 24px 12px 12px;
-  background: linear-gradient(to top, rgba(29, 42, 29, 0.95), transparent);
-  color: var(--white);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-align: center;
-  pointer-events: none;
-}
-
-/* ================= LIGHTBOX ================= */
-
-.lightbox {
-  position: fixed;
   inset: 0;
-  z-index: 1000;
-  background: rgba(15, 23, 15, 0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(18, 17, 12, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+.photo-stamp:hover .photo-stamp__overlay {
+  opacity: 1;
+}
+
+.photo-stamp__tag {
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(75, 66, 145, 0.9);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.photo-stamp__caption {
+  padding-top: 0.7rem;
+  font-size: 1rem;
+  color: var(--purple-dark);
+  font-weight: 700;
+  text-align: center;
+}
+
+.photo-serie-action {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* ─── 10. CONTACTO & CIERRE EDITORIAL (FOOTER) ────────────────────────────── */
+.section-contact {
+  position: relative;
+  width: 100%;
+  padding: 5rem 1.5rem calc(3rem + var(--ripped-paper-offset, 97px));
+  background-image: url('../assets/images/graficos/ripped-paper.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.contact-scrapbook-layout {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.contact-note-card {
+  background-color: #FFFDF0;
+  border-radius: 20px;
+  padding: 2.8rem 2.4rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  border: 1px solid #EADBBA;
+  transform: rotate(-1deg);
+}
+
+.contact-note-title {
+  font-family: var(--font-hand);
+  font-size: 2.4rem;
+  color: var(--purple-dark);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.contact-note-desc {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.contact-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #FFFFFF;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #E8E0D0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  color: var(--purple-dark);
+  font-weight: 600;
+}
+
+.contact-link-item:hover {
+  transform: translateX(4px);
+  border-color: var(--purple-main);
+  box-shadow: var(--shadow-polaroid);
+}
+
+.contact-link-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--lavender-subtle);
+  color: var(--purple-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.contact-copy-btn {
+  background: none;
+  border: 1px solid var(--purple-main);
+  color: var(--purple-main);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: auto;
+  transition: var(--transition-fast);
+}
+
+.contact-copy-btn:hover, .contact-copy-btn.btn-copied {
+  background-color: var(--purple-main);
+  color: #FFFFFF;
+}
+
+.closing-sheet-card {
+  background-color: var(--paper-card);
+  border-radius: 20px;
+  padding: 2.8rem 2.4rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  border: 1px solid rgba(210, 195, 175, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(1deg);
+}
+
+.closing-doodle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.2rem;
+  color: var(--purple-main);
+}
+
+.closing-heading {
+  font-family: var(--font-hand);
+  font-size: 2.2rem;
+  color: var(--purple-dark);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.closing-text {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.scrapbook-footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 1px dashed rgba(75, 66, 145, 0.25);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+/* ─── 11. LIGHTBOX UNIFICADO ──────────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(18, 17, 12, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 1;
+  transition: opacity 0.25s ease;
 }
 
 .lightbox.hidden {
@@ -226,99 +1710,200 @@ body {
   pointer-events: none;
 }
 
-.lightbox__content {
+.lightbox__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.lightbox__container {
   position: relative;
-  max-width: 90vw;
-  max-height: 85vh;
+  max-width: 92vw;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10002;
+}
+
+.lightbox__img-wrapper {
+  position: relative;
+  max-width: 100%;
+  max-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lightbox__img {
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 75vh;
   object-fit: contain;
   border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  transition: opacity 0.18s ease;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  transition: opacity 0.15s ease;
 }
 
-.lightbox__img.lb-fade {
+.lightbox__img.lb-fade-out {
   opacity: 0;
 }
 
-.lightbox__counter {
-  color: var(--white);
+.lightbox__caption-box {
   margin-top: 1rem;
-  font-size: 0.875rem;
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 700px;
+}
+
+.lightbox__title {
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--lavender-highlight);
+  margin-bottom: 0.3rem;
+}
+
+.lightbox__caption {
+  font-size: 0.95rem;
+  color: #E0E0E0;
+  font-weight: 400;
+}
+
+.lightbox__counter {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--lavender-highlight);
   letter-spacing: 0.15em;
-  opacity: 0.8;
+  font-weight: 700;
 }
 
 .lightbox__close,
 .lightbox__prev,
 .lightbox__next {
   position: absolute;
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  transition: background 0.2s ease, transform 0.2s ease;
-  z-index: 1010;
+  font-size: 1.3rem;
+  transition: var(--transition-fast);
+  z-index: 10005;
 }
 
 .lightbox__close:hover,
 .lightbox__prev:hover,
 .lightbox__next:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
+  background: var(--purple-main);
+  transform: scale(1.08);
 }
 
 .lightbox__close {
-  top: 24px;
-  right: 24px;
+  top: 25px;
+  right: 25px;
 }
 
 .lightbox__prev {
-  left: 24px;
+  left: 25px;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.lightbox__prev:hover {
-  transform: translateY(-50%) scale(1.05);
 }
 
 .lightbox__next {
-  right: 24px;
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.lightbox__next:hover {
-  transform: translateY(-50%) scale(1.05);
 }
 
 body.lightbox-active {
   overflow: hidden;
 }
 
-/* Breakpoint Adjustments */
-@media (max-width: 768px) {
-  :root {
-    --gcols: 10;
-    --gsubcols: 6;
+/* ─── 12. RESPONSIVIDAD Y BREAKPOINTS ─────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .hero-scrapbook__body {
+    flex-direction: column;
+    min-height: auto;
+    gap: 3rem;
   }
 
-  .portfolio-category__title {
-    font-size: 1.75rem;
+  .hero-id-col {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 1.5rem auto 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-text-block {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .id-card-wrapper {
+    width: 310px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .contact-scrapbook-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .scrapbook-nav__menu {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero-scrapbook__body {
+    padding: 1.8rem 1.25rem calc(2rem + var(--ripped-paper-offset, 97px));
+  }
+
+  .hero-scrapbook__showcase {
+    min-height: 390px;
+    padding: 2rem 1rem calc(2rem + var(--ripped-paper-offset, 97px));
+  }
+
+  .video-category-card,
+  .scrapbook-collection-card,
+  .paper-sheet {
+    padding: 2rem 1.25rem;
+  }
+
+  .lightbox__prev {
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .lightbox__next {
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .lightbox__close {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
   }
 }

@@ -1,197 +1,589 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio — Paola Andrea Muelas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paola Andrea Muelas · Creación de Contenido & Comunicación Social</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portafolio profesional de Paola Andrea Muelas: Comunicación Social, Estrategia Digital, Producción Audiovisual, Storytelling y Creación de Contenidos.">
+  <meta name="author" content="Paola Andrea Muelas">
+  <meta name="keywords" content="Paola Andrea Muelas, Creación de Contenidos, Comunicación Social, Popayán, Producción Audiovisual, Storytelling, Video, Fotografía, Scrapbook Editorial">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Paola Andrea Muelas · Creación de Contenido & Comunicación Social">
+  <meta property="og:description" content="Transformo información compleja en historias claras, cercanas y significativas que conecten con las personas y generan impacto.">
+  <meta property="og:image" content="assets/images/FOTORETRATO-POLA.png">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Bebas Neue, Syne (Sharp/Editorial Display), Kalam & Patrick Hand (Handwritten), Caveat (Accent), Outfit & Inter (Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Kalam:wght@400;700&family=Outfit:wght@400;500;600;700&family=Patrick+Hand&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos Principales -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<main>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero__container">
-            <div class="hero__content">
-                <p class="hero__eyebrow"></p>
-                <h1 class="hero__title"></h1>
-                <h2 class="hero__subtitle"></h2>
-                <p class="hero__description"></p>
-
-                <div class="hero__actions"></div>
-
-                <div class="hero__social"></div>
-            </div>
-
-            <div class="hero__image"></div>
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       1. HEADER / NAVEGACIÓN SCRAPBOOK
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <header class="scrapbook-nav">
+    <div class="scrapbook-nav__container">
+      <a href="#inicio" class="scrapbook-nav__brand" aria-label="Ir al inicio">
+        <img src="assets/images/FOTORETRATO-POLA.png" alt="Paola Andrea Muelas" class="scrapbook-nav__avatar" />
+        <div>
+          <span class="scrapbook-nav__name">Paola Andrea</span>
+          <p class="scrapbook-nav__role">Creadora de Contenidos</p>
         </div>
-    </section>
+      </a>
 
-    <!-- Sobre mí -->
-    <section class="about">
-        <div class="about__container">
-            <div class="about__content">
-                <h2 class="about__title"></h2>
-                <p class="about__description"></p>
+      <!-- Menú Desktop -->
+      <nav class="scrapbook-nav__menu" aria-label="Menú principal">
+        <a href="#inicio" class="scrapbook-nav__link">Inicio</a>
+        <a href="#que-hago" class="scrapbook-nav__link">¿Qué hago?</a>
+        <a href="#videos" class="scrapbook-nav__link">Videos</a>
+        <a href="#diseno-digital" class="scrapbook-nav__link">Diseño Digital</a>
+        <a href="#fotografia" class="scrapbook-nav__link">Fotografía</a>
+        <a href="#contacto" class="scrapbook-btn-pill">
+          <i class="fa-regular fa-paper-plane"></i> Hablemos
+        </a>
+      </nav>
+
+      <!-- Botón Menú Móvil -->
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="scrapbook-nav__mobile-dropdown">
+      <a href="#inicio" class="mobile-nav-link">Inicio</a>
+      <a href="#que-hago" class="mobile-nav-link">¿Qué hago?</a>
+      <a href="#videos" class="mobile-nav-link">Videos</a>
+      <a href="#diseno-digital" class="mobile-nav-link">Diseño Digital</a>
+      <a href="#fotografia" class="mobile-nav-link">Fotografía</a>
+      <a href="#contacto" class="scrapbook-btn-pill" style="justify-content: center;">
+        <i class="fa-regular fa-paper-plane"></i> Hablemos
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         2. HERO SECTION (PORTAFOLIO GIGANTE + RETRATO POLA + DOODLES)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <section id="inicio" class="hero-scrapbook">
+      <div class="hero-scrapbook__paper-bg">
+        
+        <!-- Showcase Superior: Doodles, Retrato y Borde Rasgado -->
+        <div class="hero-scrapbook__showcase">
+          <!-- Esquina Superior Izquierda: Círculos manuscritos con "ideas • crear • inspirar" -->
+          <div class="hero-doodle-left-container" aria-hidden="true">
+            <svg class="hero-doodle-left" width="145" height="115" viewBox="0 0 145 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Círculos imperfectos trazados a mano -->
+              <path d="M 72 14 C 112 10, 138 30, 133 60 C 127 90, 88 98, 44 94 C 16 91, 8 68, 18 40 C 26 16, 57 13, 90 18 C 124 24, 134 52, 124 76 C 112 96, 56 100, 28 86" stroke="#111111" stroke-width="1.8" fill="none" stroke-dasharray="3 1.5"/>
+              <!-- Estrellas / Destellos en #111111 -->
+              <path d="M 20 18 L 23 25 L 30 27 L 23 29 L 20 36 L 17 29 L 10 27 L 17 25 Z" fill="#111111"/>
+              <path d="M 125 14 L 127 19 L 132 20 L 127 22 L 125 27 L 123 22 L 118 20 L 123 19 Z" fill="#111111"/>
+              <path d="M 132 88 L 134 92 L 138 93 L 134 94 L 132 98 L 130 94 L 126 93 L 130 92 Z" fill="#111111"/>
+              <!-- Palabras manuscritas dentro del círculo -->
+              <text x="72" y="42" font-family="'Patrick Hand', 'Kalam', cursive" font-size="16" font-weight="700" fill="#111111" text-anchor="middle" letter-spacing="0.05em">Creación</text>
+              <text x="72" y="60" font-family="'Patrick Hand', 'Kalam', cursive" font-size="16" font-weight="700" fill="#111111" text-anchor="middle" letter-spacing="0.05em">de</text>
+              <text x="72" y="78" font-family="'Patrick Hand', 'Kalam', cursive" font-size="16" font-weight="700" fill="#111111" text-anchor="middle" letter-spacing="0.05em">contenido</text>
+            </svg>
+          </div>
+
+          <!-- Fotografía Principal Superpuesta con Relieve de Collage -->
+          <div class="hero-portrait-frame">
+            <img src="assets/images/FOTORETRATO-POLA.png" alt="Fotografía de Paola Andrea Muelas" class="hero-portrait-img" />
+          </div>
+
+          <div class="hero-note-tag">
+            <span class="hero-note-text">
+              <i class="fa-solid fa-camera-retro text-purple"></i>COMUNICACIÓN SOCIAL
+            </span>
+            <img src="assets/images/graficos/hand-drawn-underline.svg" alt="" class="hero-note-underline" aria-hidden="true" />
+          </div>
+
+          <!-- Esquina Superior Derecha: Avión de papel con estela punteada en arco y loop -->
+          <div class="hero-doodle-right-container" aria-hidden="true">
+            <svg class="hero-doodle-right" width="180" height="130" viewBox="0 0 180 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Estela de trayectoria con curvatura en loop -->
+              <path d="M 10 112 C 55 106, 82 76, 96 46 C 106 28, 92 18, 77 30 C 62 42, 76 72, 110 62 C 138 52, 148 38, 156 28" stroke="#111111" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+              <!-- Pequeño avión de papel -->
+              <g transform="translate(148, 16) rotate(22)">
+                <polygon points="0,0 28,11 0,22 7,11" fill="#FAF8F5" stroke="#111111" stroke-width="2"/>
+                <line x1="7" y1="11" x2="28" y2="11" stroke="#111111" stroke-width="1.8"/>
+              </g>
+              <!-- Destellos y pequeños brillos en #111111 -->
+              <path d="M 22 108 L 24 112 L 28 113 L 24 114 L 22 118 L 20 114 L 16 113 L 20 112 Z" fill="#111111"/>
+              <path d="M 70 90 L 72 93 L 76 94 L 72 95 L 70 98 L 68 95 L 64 94 L 68 93 Z" fill="#111111"/>
+            </svg>
+          </div>
+
+          <!-- Título Gigante "PORTAFOLIO" de fondo con Relieve 3D y caracteres dinámicos -->
+          <div class="hero-backdrop-title-wrapper" aria-hidden="true">
+            <div class="hero-backdrop-title">
+              <span class="hero-backdrop-char">P</span>
+              <span class="hero-backdrop-char">O</span>
+              <span class="hero-backdrop-char">R</span>
+              <span class="hero-backdrop-char">T</span>
+              <span class="hero-backdrop-char">A</span>
+              <span class="hero-backdrop-char">F</span>
+              <span class="hero-backdrop-char">O</span>
+              <span class="hero-backdrop-char">L</span>
+              <span class="hero-backdrop-char">I</span>
+              <span class="hero-backdrop-char">O</span>
             </div>
+            <div class="hero-role-brush-badge"></div>
+          </div>
+
         </div>
-    </section>
 
-    <!-- Servicios -->
-    <section class="services">
-        <div class="services__container">
-            <div class="services__header">
-                <h2 class="services__title"></h2>
-                <p class="services__description"></p>
-            </div>
+        <!-- Bloque Inferior: Carnet + Título PORTAFOLIO y Contenido -->
+        <div class="hero-scrapbook__body">
+          
+          <div class="hero-id-col">
+            <!-- Carnet Profesional Físico Hiperrealista -->
+            <div class="id-card-wrapper">
+              <img src="assets/images/graficos/lanyard.svg" alt="Lanyard" class="lanyard-svg" />
 
-            <div class="services__grid">
+              <div class="washi-tape washi-tape--top-left"></div>
+              <div class="washi-tape washi-tape--top-right"></div>
 
-                <article class="service-card"></article>
-                <article class="service-card"></article>
-                <article class="service-card"></article>
-                <article class="service-card"></article>
-                <article class="service-card"></article>
-                <article class="service-card"></article>
+              <div class="id-badge">
+                <div class="id-badge-hole"></div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Portafolio -->
-    <section class="portfolio">
-        <div class="portfolio__container">
-
-            <div class="portfolio__header">
-                <h2 class="portfolio__title"></h2>
-                <p class="portfolio__description"></p>
-            </div>
-
-            <!-- Producción audiovisual -->
-            <section class="portfolio-category">
-                <div class="portfolio-category__header">
-                    <h3 class="portfolio-category__title"></h3>
-                    <p class="portfolio-category__description"></p>
+                <div class="id-badge-photo-wrap">
+                  <img src="assets/images/FOTORETRATO-POLA.png" alt="Paola Andrea Muelas" class="id-badge-photo" />
                 </div>
 
-                <!-- Gobierno -->
-                <section class="project-group">
-                    <div class="project-group__header">
-                        <h4 class="project-group__title"></h4>
-                        <p class="project-group__description"></p>
-                    </div>
-
-                    <div class="project-group__gallery"></div>
-                </section>
-
-                <!-- Educación -->
-                <section class="project-group">
-                    <div class="project-group__header">
-                        <h4 class="project-group__title"></h4>
-                        <p class="project-group__description"></p>
-                    </div>
-
-                    <div class="project-group__gallery"></div>
-                </section>
-
-                <!-- Editorial -->
-                <section class="project-group">
-                    <div class="project-group__header">
-                        <h4 class="project-group__title"></h4>
-                        <p class="project-group__description"></p>
-                    </div>
-
-                    <div class="project-group__gallery"></div>
-                </section>
-            </section>
-
-            <!-- Diseño -->
-            <section class="portfolio-category">
-                <div class="portfolio-category__header">
-                    <h3 class="portfolio-category__title"></h3>
-                    <p class="portfolio-category__description"></p>
+                <div class="id-badge-info">
+                  <h3 class="id-badge-name">Paola Andrea Muelas</h3>
+                  <p class="id-badge-role">Comunicadora</p>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="portfolio-category__gallery"></div>
-            </section>
+          <!-- Columna Derecha: Textos del Hero -->
+          <div class="hero-text-block">
+            <h1 class="hero-main-title">Hola, soy Paola Andrea</h1>
 
-            <!-- Fotografía -->
-            <section class="portfolio-category">
-                <div class="portfolio-category__header">
-                    <h3 class="portfolio-category__title">Fotografía</h3>
-                    <p class="portfolio-category__description">Galería de imágenes y fotoperiodismo</p>
-                </div>
+            <h2 class="hero-subtitle">
+              Comunicadora Social, estratega y creadora de contenidos
+            </h2>
 
-                <div class="portfolio-category__gallery">
-                    <div id="gallery-grid" class="gallery-grid"></div>
-                </div>
-            </section>
-
-        </div>
-    </section>
-
-    <!-- Experiencia -->
-    <section class="experience">
-        <div class="experience__container">
-            <div class="experience__header">
-                <h2 class="experience__title"></h2>
-                <p class="experience__description"></p>
+            <div class="hero-short-msg">
+              <i class="fa-solid fa-quote-left text-purple" style="font-size: 0.9rem; vertical-align: top;"></i>
+              El arte de contar lo difícil de forma sencilla.
+              <i class="fa-solid fa-quote-right text-purple" style="font-size: 0.9rem; vertical-align: top;"></i>
             </div>
 
-            <div class="experience__timeline"></div>
-        </div>
-    </section>
+            <p class="hero-long-desc">
+              Transformo información compleja en historias claras, cercanas y significativas que conecten con las personas y generan impacto.
+            </p>
 
-    <!-- Resultados -->
-    <section class="metrics">
-        <div class="metrics__container">
-            <div class="metrics__header">
-                <h2 class="metrics__title"></h2>
-                <p class="metrics__description"></p>
+            <div class="hero-actions">
+              <a href="#videos" class="scrapbook-btn-pill">
+                <i class="fa-solid fa-play"></i> Conocer mi trabajo
+              </a>
+              <a href="#contacto" class="scrapbook-btn-outline">
+                <i class="fa-regular fa-comment-dots"></i> Escríbeme
+              </a>
             </div>
-
-            <div class="metrics__grid"></div>
+          </div>
         </div>
+
+      </div>
     </section>
 
-    <!-- Contacto -->
-    <section class="contact">
-        <div class="contact__container">
-            <div class="contact__content">
-                <h2 class="contact__title"></h2>
-                <p class="contact__description"></p>
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         3. ¿QUÉ HAGO? (SERVICIOS Y ESPECIALIDADES)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <section id="que-hago" class="section-que-hago">
+      <div class="section-editorial-header">
+        <div class="section-editorial-badge">
+          <i class="fa-solid fa-pen-ruler"></i> Especialidades & Servicios
+        </div>
+        <h2 class="section-editorial-title hand-drawn-underline">¿QUÉ HAGO?</h2>
+        <p class="section-editorial-subtitle">
+          Estrategias y habilidades para crear contenido memorable y con propósito.
+        </p>
+      </div>
 
-                <div class="contact__actions"></div>
+      <div class="skills-scrapbook-grid">
+        <div class="skill-sticky-note tilt-1">
+          <div class="skill-icon"><i class="fa-regular fa-calendar-check"></i></div>
+          <span class="skill-text">Planificación de contenido</span>
+        </div>
 
-                <div class="contact__social"></div>
+        <div class="skill-sticky-note tilt-2">
+          <div class="skill-icon"><i class="fa-solid fa-scissors"></i></div>
+          <span class="skill-text">Edición de video</span>
+        </div>
+
+        <div class="skill-sticky-note tilt-3">
+          <div class="skill-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+          <span class="skill-text">Storytelling</span>
+        </div>
+
+        <div class="skill-sticky-note tilt-4">
+          <div class="skill-icon"><i class="fa-solid fa-video"></i></div>
+          <span class="skill-text">Producción audiovisual</span>
+        </div>
+
+        <div class="skill-sticky-note tilt-1">
+          <div class="skill-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+          <span class="skill-text">Copywriting</span>
+        </div>
+
+        <div class="skill-sticky-note tilt-2">
+          <div class="skill-icon"><i class="fa-solid fa-people-group"></i></div>
+          <span class="skill-text">Coordinación entre equipos técnicos</span>
+        </div>
+      </div>
+
+      <!-- Software / Herramientas que manejo (Estilo Scrapbook con Badges) -->
+      <div class="software-scrapbook-block">
+        <div class="washi-tape washi-tape--top-center"></div>
+        <h3 class="software-title font-hand">
+          <i class="fa-solid fa-laptop-code text-purple"></i> Herramientas & Software
+        </h3>
+        <div class="software-icons-grid">
+          <div class="software-badge software-badge--pr" title="Adobe Premiere Pro"><span>Pr</span></div>
+          <div class="software-badge software-badge--ae" title="Adobe After Effects"><span>Ae</span></div>
+          <div class="software-badge software-badge--ps" title="Adobe Photoshop"><span>Ps</span></div>
+          <div class="software-badge software-badge--ai" title="Adobe Illustrator"><span>Ai</span></div>
+          <div class="software-badge software-badge--capcut" title="CapCut"><span>Cc</span></div>
+          <div class="software-badge software-badge--canva" title="Canva"><span>Ca</span></div>
+        </div>
+        <!-- Estrella dibujada a mano en #111111 -->
+        <svg class="software-star-doodle" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 21 3 L 24 15 L 37 13 L 28 23 L 36 35 L 22 28 L 12 37 L 15 24 L 4 18 L 17 17 Z" stroke="#111111" stroke-width="1.8" fill="none"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         4. VIDEO (PRODUCCIÓN Y POSPRODUCCIÓN)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <section id="videos" class="section-videos">
+      <div class="section-editorial-header">
+        <div class="section-editorial-badge">
+          <i class="fa-solid fa-film"></i> Producción y Posproducción
+        </div>
+        <h2 class="section-editorial-title hand-drawn-underline">VIDEO</h2>
+        <p class="section-editorial-subtitle">
+          Estrategia audiovisual para transformar datos, procesos institucionales y cultura en piezas memorables.
+        </p>
+      </div>
+
+      <!-- 4.1 GOBIERNO: Secretaría de Planeación -->
+      <article class="video-category-card">
+        <div class="washi-tape washi-tape--top-left"></div>
+        <div class="washi-tape washi-tape--top-right"></div>
+
+        <div class="video-category-header">
+          <span class="video-category-badge">Gobierno & Gestión Pública</span>
+          <h3 class="video-category-title">Secretaría de Planeación</h3>
+          <p class="video-category-narrative">
+            En la Secretaría de Planeación transformé datos e información técnica en narrativas pensadas para conectar con la ciudadanía. Combiné edición y recursos visuales para hacer que temas complejos fueran más claros, cercanos y atractivos. El resultado: <strong>contenidos con engagement de hasta 9,3 % y más de 4.000 reproducciones orgánicas</strong>.
+          </p>
+        </div>
+
+        <div class="videos-grid-3col">
+          <!-- Video 1: Minuto de Planeación -->
+          <div class="video-scrapbook-item tilt-1">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--16-9">
+              <iframe src="https://www.youtube.com/embed/RD8xoN5QcRk" title="Minuto de Planeación" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
+            <div class="video-item-meta">
+              <h4 class="video-item-title">Minuto de Planeación</h4>
+              <p class="video-item-note">Formato informativo rápido y dinámico para rendición de cuentas.</p>
+            </div>
+          </div>
+
+          <!-- Video 2: Michis y ODS -->
+          <div class="video-scrapbook-item tilt-2">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--16-9">
+              <iframe src="https://www.youtube.com/embed/DmDEgGAFBLA" title="Michis y ODS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item-meta">
+              <h4 class="video-item-title">Michis y ODS</h4>
+              <p class="video-item-note">Storytelling creativo usando tendencias para explicar los Objetivos de Desarrollo Sostenible.</p>
+            </div>
+          </div>
+
+          <!-- Video 3: Proyectos de Secretaría de Planeación -->
+          <div class="video-scrapbook-item tilt-3">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--16-9">
+              <iframe src="https://www.youtube.com/embed/qGtKNsy6etw" title="Proyectos de Secretaría de Planeación" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item-meta">
+              <h4 class="video-item-title">Proyectos de Planeación</h4>
+              <p class="video-item-note">Visibilización de obras e impacto ciudadano en Popayán.</p>
+            </div>
+          </div>
         </div>
+      </article>
+
+      <!-- 4.2 EDUCACIÓN: Universidad del Cauca -->
+      <article class="video-category-card">
+        <div class="washi-tape washi-tape--top-left"></div>
+        <div class="washi-tape washi-tape--top-right"></div>
+
+        <div class="video-category-header">
+          <span class="video-category-badge">Educación Superior</span>
+          <h3 class="video-category-title">Universidad del Cauca · El Bus de la Acreditación</h3>
+          <p class="video-category-narrative">
+            Transformé un proceso institucional y burocrático en una narrativa cercana y fácil de comprender. A través de una metáfora sobre un <strong>viaje en bus</strong>, desarrollé piezas audiovisuales que hicieron de la Acreditación una experiencia más humana, dinámica y participativa. La narrativa no solo buscó explicar el proceso, sino también poner en valor las razones, logros y fortalezas que hacen de la Universidad del Cauca una institución merecedora de este reconocimiento.
+          </p>
+        </div>
+
+        <div class="videos-grid-3col">
+          <!-- Video 1: Ticketes para el Bus de la Acreditación -->
+          <div class="video-scrapbook-item tilt-1">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--16-9">
+              <iframe src="https://www.youtube.com/embed/rx_uRsJ5Mrw?si=6BX0uWv-3lJ0lcze" title="Ticketes para el Bus de la Acreditación" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item-meta">
+              <h4 class="video-item-title">Ticketes para el Bus</h4>
+              <p class="video-item-note">Pieza central que activa el concepto del viaje colectivo hacia la acreditación.</p>
+            </div>
+          </div>
+
+          <!-- Video 2: Camino hacia la reacreditación 2027 (Vertical) -->
+          <div class="video-scrapbook-item tilt-2">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--9-16">
+              <iframe src="https://www.youtube.com/embed/Q8vPn_2Yixc" title="Camino hacia la reacreditación 2027" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item-meta text-center">
+              <h4 class="video-item-title">Camino a la Reacreditación</h4>
+              <p class="video-item-note">Formato vertical dinámico optimizado para consumo en redes sociales.</p>
+            </div>
+          </div>
+
+          <!-- Video 3: Razones para reacreditarnos FIET (Vertical) -->
+          <div class="video-scrapbook-item tilt-3">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--9-16">
+              <iframe src="https://www.youtube.com/embed/ZRFQJuwtTIE" title="Razones para reacreditarnos FIET" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item-meta text-center">
+              <h4 class="video-item-title">Razones FIET</h4>
+              <p class="video-item-note">Cápsula testimonial destacando fortalezas de Ingeniería y Telecomunicaciones.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4.3 EDITORIAL: Editorial Universidad del Cauca -->
+      <article class="video-category-card">
+        <div class="washi-tape washi-tape--top-left"></div>
+        <div class="washi-tape washi-tape--top-right"></div>
+
+        <div class="video-category-header">
+          <span class="video-category-badge">Editorial & Cultura</span>
+          <h3 class="video-category-title">Editorial Universidad del Cauca</h3>
+          <p class="video-category-narrative">
+            Contribuí a transformar la comunicación de la Editorial Universidad del Cauca, definiendo una personalidad y tono de marca más cercanos y culturales. A través de piezas audiovisuales y contenidos de valor, buscamos que la Editorial no fuera percibida únicamente como un espacio para publicar y vender libros, sino como una marca capaz de generar conversación, compartir conocimiento y conectar a las personas con la cultura y la creación académica. El contenido se convirtió así en un producto de valor por sí mismo, más allá de la promoción editorial.
+          </p>
+        </div>
+
+        <div class="videos-grid-3col">
+          <!-- Video 1: La piedad (Vertical) -->
+          <div class="video-scrapbook-item tilt-1">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--9-16">
+              <iframe src="https://www.youtube.com/embed/sKKEezJcE90" title="La piedad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item-meta text-center">
+              <h4 class="video-item-title">La piedad</h4>
+              <p class="video-item-note">Micro-cápsula de divulgación literaria con tono íntimo y sensible.</p>
+            </div>
+          </div>
+
+          <!-- Video 2: Año Nuevo (Vertical) -->
+          <div class="video-scrapbook-item tilt-2">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--9-16">
+              <iframe src="https://www.youtube.com/embed/RrVItObnpP0" title="Año Nuevo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item-meta text-center">
+              <h4 class="video-item-title">Año Nuevo</h4>
+              <p class="video-item-note">Mensaje de conexión emocional y celebración de la comunidad lectora.</p>
+            </div>
+          </div>
+
+          <!-- Video 3: Teaser Quintín Lame (16:9) -->
+          <div class="video-scrapbook-item tilt-3">
+            <div class="washi-tape washi-tape--corner"></div>
+            <div class="video-iframe-wrapper video-iframe-wrapper--16-9">
+              <iframe src="https://www.youtube.com/embed/umXVKv7WBQM" title="Teaser Quintín Lame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-item-meta">
+              <h4 class="video-item-title">Teaser Quintín Lame</h4>
+              <p class="video-item-note">Tráiler cinematográfico para el lanzamiento de la obra sobre el líder indígena.</p>
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
 
-</main>
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         5. IMAGEN (DISEÑO DIGITAL)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <section id="diseno-digital" class="section-imagen">
+      <div class="section-editorial-header">
+        <div class="section-editorial-badge">
+          <i class="fa-solid fa-palette"></i> Diseño & Contenidos Gráficos
+        </div>
+        <h2 class="section-editorial-title hand-drawn-underline">IMAGEN</h2>
+        <p class="section-editorial-subtitle">
+          Piezas gráficas para redes sociales, carruseles pedagógicos y comunicación visual estructurada.
+        </p>
+      </div>
 
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
-    <button class="lightbox__close" onclick="closeLightbox()" aria-label="Cerrar">&times;</button>
-    <button class="lightbox__prev" onclick="changeLightboxImage(-1)" aria-label="Anterior">&#10094;</button>
-    <div class="lightbox__content">
+      <!-- 5.1 Carrusel Funcionario -->
+      <div id="carrusel-gallery-container"></div>
+
+      <!-- 5.2 Posts para Redes Sociales -->
+      <div id="posts-gallery-container"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         6. FOTOGRAFÍA (CUBRIMIENTOS Y CONCEPTOS)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <section id="fotografia" class="section-fotografia">
+      <div class="section-editorial-header">
+        <div class="section-editorial-badge">
+          <i class="fa-solid fa-camera"></i> Registro Visual & Conceptual
+        </div>
+        <h2 class="section-editorial-title hand-drawn-underline">FOTOGRAFÍA</h2>
+        <p class="section-editorial-subtitle">
+          Cubrimientos institucionales, fotoperiodismo territorial y ensayos conceptuales en el Cauca.
+        </p>
+      </div>
+
+      <!-- Contenedor dinámico para Velatón, Ruta 2027 y Ocaso de los Ídolos -->
+      <div id="photo-series-container"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         7. CONTACTO & CIERRE EDITORIAL (FOOTER)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <section id="contacto" class="section-contact">
+      <div class="contact-scrapbook-layout">
+        <!-- Tarjeta Post-it de Contacto -->
+        <div class="contact-note-card">
+          <div class="washi-tape washi-tape--top-center"></div>
+          
+          <h3 class="contact-note-title">¿Hablamos de tu próximo proyecto?</h3>
+          <p class="contact-note-desc">
+            Estoy disponible para proyectos de creación de contenido, producción audiovisual, estrategias de comunicación institucional y storytelling con propósito.
+          </p>
+
+          <div class="contact-links-list">
+            <a href="mailto:paolaandreamuelas@gmail.com" class="contact-link-item">
+              <div class="contact-link-icon"><i class="fa-regular fa-envelope"></i></div>
+              <div>
+                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">Correo Electrónico</span>
+                <span>paolaandreamuelas@gmail.com</span>
+              </div>
+              <button type="button" id="copy-email-btn" class="contact-copy-btn" data-email="paolaandreamuelas@gmail.com" aria-label="Copiar correo">
+                <i class="fa-regular fa-copy"></i> Copiar
+              </button>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+              <div class="contact-link-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div>
+                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">LinkedIn</span>
+                <span>Paola Andrea Muelas Núñez</span>
+              </div>
+            </a>
+
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+              <div class="contact-link-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div>
+                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">Instagram</span>
+                <span>@paolamuelas</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Cierre Creativo -->
+        <div class="closing-sheet-card">
+          <div class="washi-tape washi-tape--top-right"></div>
+          
+          <svg class="closing-doodle" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 5 L35 20 L50 22 L38 32 L42 47 L30 38 L18 47 L22 32 L10 22 L25 20 Z" stroke="#4B4291" stroke-width="2.5" fill="#C1BAD9" fill-opacity="0.3"/>
+            <circle cx="30" cy="30" r="22" stroke="#111111" stroke-width="1.5" stroke-dasharray="3 3"/>
+          </svg>
+
+          <h3 class="closing-heading">¡Gracias por visitar mi portafolio!</h3>
+          <p class="closing-text">
+            "El arte de contar lo difícil de forma sencilla y conectar desde la emoción humana."
+          </p>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="#inicio" class="scrapbook-btn-pill">
+              <i class="fa-solid fa-arrow-up"></i> Volver arriba
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="scrapbook-footer">
+        <p>© 2026 Paola Andrea Muelas Núñez · Todos los derechos reservados · Colombia</p>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       8. LIGHTBOX MODAL UNIFICADO (IMÁGENES Y FOTOGRAFÍAS)
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Visor ampliado de imagen" aria-hidden="true">
+    <div class="lightbox__overlay" onclick="closeLightbox()"></div>
+    
+    <button class="lightbox__close" onclick="closeLightbox()" aria-label="Cerrar visor">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button class="lightbox__prev" onclick="navigateLightbox(-1)" aria-label="Imagen anterior">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="lightbox__container">
+      <div class="lightbox__img-wrapper">
         <img id="lightbox-img" class="lightbox__img" src="" alt="Vista ampliada" />
-        <div id="lightbox-counter" class="lightbox__counter"></div>
+      </div>
+      <div class="lightbox__caption-box">
+        <h4 id="lightbox-title" class="lightbox__title"></h4>
+        <p id="lightbox-caption" class="lightbox__caption"></p>
+        <span id="lightbox-counter" class="lightbox__counter"></span>
+      </div>
     </div>
-    <button class="lightbox__next" onclick="changeLightboxImage(1)" aria-label="Siguiente">&#10095;</button>
-</div>
 
-<footer class="footer">
-    <div class="footer__container">
-        <div class="footer__content"></div>
-    </div>
-</footer>
+    <button class="lightbox__next" onclick="navigateLightbox(1)" aria-label="Siguiente imagen">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
 
-<script src="js/resources.js" defer></script>
-<script src="js/gallery.js" defer></script>
-<script src="js/main.js" defer></script>
+  <!-- Scripts -->
+  <script src="js/resources.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

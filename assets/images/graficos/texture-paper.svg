@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <!-- Textura de papel con ruido -->
+    <filter id="papelTextura" x="0%" y="0%" width="100%" height="100%">
+      <!-- Rugosidad superficial -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="2" result="ruido"/>
+      <!-- Mezclar ruido con el color base -->
+      <feColorMatrix type="matrix" in="ruido" result="tono"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.12 0"/>
+      <!-- Combinar con fondo -->
+      <feBlend in="SourceGraphic" in2="tono" mode="multiply" result="conRuido"/>
+      
+      <!-- Micro fibras / vetas del papel -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.5 0.02" numOctaves="3" seed="5" result="vetas"/>
+      <feColorMatrix type="matrix" in="vetas" result="vetasColor"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.04 0"/>
+      <feBlend in="conRuido" in2="vetasColor" mode="multiply" result="conVetas"/>
+      
+      <!-- Manchas / imperfecciones sutiles -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="2" seed="8" result="manchas"/>
+      <feColorMatrix type="matrix" in="manchas" result="manchasColor"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.06 0"/>
+      <feBlend in="conVetas" in2="manchasColor" mode="multiply" result="final"/>
+      
+      <!-- Ajuste de contraste para un acabado natural -->
+      <feComponentTransfer in="final">
+        <feFuncR type="linear" slope="1.05" intercept="-0.02"/>
+        <feFuncG type="linear" slope="1.05" intercept="-0.02"/>
+        <feFuncB type="linear" slope="1.05" intercept="-0.02"/>
+      </feComponentTransfer>
+    </filter>
+    
+    <!-- Degradado suave para dar profundidad -->
+    <linearGradient id="gradPapel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7f5f0"/>
+      <stop offset="30%" stop-color="#f2efe8"/>
+      <stop offset="60%" stop-color="#f0ede5"/>
+      <stop offset="100%" stop-color="#eae6dc"/>
+    </linearGradient>
+    
+    <!-- Sombra muy leve -->
+    <filter id="sombra">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#00000015"/>
+    </filter>
+  </defs>
+  
+  <!-- Base del papel con textura -->
+  <rect width="800" height="500" rx="2" fill="url(#gradPapel)" filter="url(#papelTextura)" style="filter: url(#papelTextura);"/>
+  
+  <!-- Líneas de fibra largas (como papel artesanal) -->
+  <g opacity="0.04" stroke="#8a7a5a" stroke-width="0.3" fill="none">
+    <path d="M 50,20 Q 200,18 400,22 Q 600,26 780,20"/>
+    <path d="M 20,80 Q 300,75 500,82 Q 700,88 790,80"/>
+    <path d="M 10,140 Q 250,135 450,142 Q 650,148 790,140"/>
+    <path d="M 30,200 Q 200,195 500,202 Q 700,208 790,198"/>
+    <path d="M 15,260 Q 250,255 480,262 Q 680,268 790,258"/>
+    <path d="M 40,320 Q 300,315 520,322 Q 720,328 790,318"/>
+    <path d="M 10,380 Q 200,375 450,382 Q 650,388 780,378"/>
+    <path d="M 25,440 Q 250,435 500,442 Q 700,448 790,438"/>
+  </g>
+  
+  <!-- Pequeñas imperfecciones: motas -->
+  <g fill="#c4b89a" opacity="0.08">
+    <circle cx="120" cy="90" r="1.5"/>
+    <circle cx="340" cy="65" r="1"/>
+    <circle cx="560" cy="110" r="2"/>
+    <circle cx="710" cy="70" r="1.2"/>
+    <circle cx="200" cy="180" r="1.8"/>
+    <circle cx="450" cy="160" r="1"/>
+    <circle cx="650" cy="200" r="1.5"/>
+    <circle cx="80" cy="280" r="1.3"/>
+    <circle cx="380" cy="300" r="1.7"/>
+    <circle cx="600" cy="270" r="1"/>
+    <circle cx="150" cy="390" r="1.5"/>
+    <circle cx="500" cy="370" r="1.2"/>
+    <circle cx="730" cy="400" r="1.8"/>
+    <circle cx="300" cy="460" r="1"/>
+    <circle cx="550" cy="450" r="1.5"/>
+  </g>
+</svg>
