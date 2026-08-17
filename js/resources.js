@@ -142,6 +142,11 @@ const PORTFOLIO_RESOURCES = {
           url: "assets/images/FOTOGRAFIA/RUTA 2027/7_ACRE.jpg",
           title: "Hacia el 2027",
           caption: "Consolidación de la meta institucional con visión de futuro."
+        },
+        {
+          url: "assets/images/FOTOGRAFIA/RUTA 2027/8_ACRE.jpg",
+          title: "Hacia el 2027",
+          caption: "Espacio participativo donde los estudiantes plasman su respaldo a la Ruta 2027."
         }
       ]
     },
