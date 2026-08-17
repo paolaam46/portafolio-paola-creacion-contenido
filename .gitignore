@@ -3,7 +3,6 @@
 Thumbs.db
 
 # Editors and local tools
-.vscode/
 .idea/
 .obsidian/workspace.json
 
@@ -14,6 +13,7 @@ Thumbs.db
 *.temp
 *.swp
 *~
+temp_auto_push.bat
 
 # Dependency folders
 node_modules/
@@ -29,4 +29,5 @@ node_modules/
 # Local backups
 *.bak
 __pycache__
-error_git_log.txt
+error_git_log.txt.gitignore
+branch_structure.json
